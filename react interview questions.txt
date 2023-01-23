@@ -1,0 +1,121 @@
+React interview Question
+1.what are the limitations of react
+2.what is one way data binding in react
+3.diff between usestate and props
+4.what is react hook
+5.what is callback function
+6.what is custom hooks in react
+7.develop a component having button which heat the count
+8.what is the function of render() method
+9.what is virtual dom
+10.what is the return type of local storage
+11.how will you pass data from child component to parent component
+12.how does react work
+13.how does eseEffect works
+14.what is react routing
+15.how to communicate parent and child component
+16.how we update state
+17.can browser is able to read jsx
+18.why you are using react tha angular(Difference)
+19.what is higher order component in react
+20.can we reuse functional component
+21.diff between class and function component
+22.what are the types of hooks
+23.what is the use of useMemo hook
+24.explain the flow of redux
+25.what are promises
+26.what is prop drilling
+27.can we use multiple reducers in component
+28.what is lazy loading
+29.what is use of package.json
+30.what is use of package.lock.json 
+31.what is npm run build
+32.write program of increament and decreament on clicking button
+33.diff between state and props
+34.what is react
+35.what is main feature of react
+36.what is server side rendering
+37.limitatins of react
+38.what is cintext hook
+39.what is react fragment
+40.diff bet controlled and uncomtrolled component
+41.what is react router
+42.what is redux
+43.what is higher order component
+44.what is react
+45.what is single page application
+46.when do you use single and double page application
+47.what is rest and spread operator
+48.whtat is component lifecycle method in react
+49.what is useContext hook in react
+50.what is diff between component and container
+51.diff bet angular and react
+52.what are diff hooks in react
+53.write down the function of cloure
+54.when we use call,apply,bind
+55.whai is this keyword
+56.write code for usecontext to pass adat from parent component to nth child component
+57.what are portals in react
+58.what are key concept in react
+59.what do you mean by lifting a state
+60.what is the work of dispatcher
+61.diff between usestate and usereducer
+62.diff between pure componenet and normal componenet
+63.diff bet usememo and usecallback
+64.nullish coalising
+65.what is default parameter
+
+
+Javascript imterview question
+1. function output(){
+a=10
+let b=20;
+
+}
+output()
+what is the output of 
+console.log(a)
+console.log(b)
+
+2.what is hoisting in javascript
+3.what is closure in js
+4.write code for axios/fetch/
+5.what is the purpose of callback
+6.what is arrow function
+7.what is this keyword
+8.It is possible to find length in object
+9.what is synchronous and asynchronous
+10.diff between for in and for of
+11.whai is higher order component
+12.diff between session storage and local storage
+13.what is diff between async and script defer
+14.new feature introduce in es6
+15.diff bet map and for each
+16.what is push and replace
+17.what is promices
+18.
+
+
+
+HTML interview question
+1.what is sematic tags and its use
+2.what is html attributes
+3.what is meta tag
+4.what is event bubling
+5.diff between local and session storage
+6.what is diff between script async and script differ
+
+
+CSS interview question
+1.what is specificity in css
+2.what is box model in css
+3.position in css
+4.Absolute and relative position
+5.diff between display none and hidden
+6.It is posible to change inline element into block
+7.what is the purpose of opacity
+8.sudo element and sudo class
+9.how to make div/element center
+10.how to find weather browser supports grid or flex feature
+11.what is diff bet block level and inline
+12.diff bet flex and grid
