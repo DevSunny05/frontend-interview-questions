@@ -1,7 +1,7 @@
 React interview Question
 1.what are the limitations of react
 2.what is one way data binding in react
-3.diff between usestate and props
+3.diff between state and props
 4.what is react hook
 5.what is callback function
 6.what is custom hooks in react
