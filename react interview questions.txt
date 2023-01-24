@@ -64,6 +64,12 @@ React interview Question
 63.diff bet usememo and usecallback
 64.nullish coalising
 65.what is default parameter
+66.error boundries in react
+67.what is transpiler and bundler
+68.what is keys in react
+69.what is dispatcher and how it is work
+70.what is react saga
+71.how react saga work
 
 
 Javascript imterview question
@@ -93,7 +99,10 @@ console.log(b)
 15.diff bet map and for each
 16.what is push and replace
 17.what is promices
-18.
+18.what is callback fiction
+19.what is pure function
+20.what are diff arry manupulation methods
+21.why javascript is called interpreted language
 
 
 
