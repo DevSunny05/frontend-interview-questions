@@ -11,7 +11,7 @@ React interview Question
 10.what is the return type of local storage
 11.how will you pass data from child component to parent component
 12.how does react work
-13.how does eseEffect works
+13.how does useEffect works
 14.what is react routing
 15.how to communicate parent and child component
 16.how we update state
