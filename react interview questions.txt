@@ -70,6 +70,7 @@ React interview Question
 69.what is dispatcher and how it is work
 70.what is react saga
 71.how react saga work
+72.What is the use of refs?
 
 
 Javascript imterview question
