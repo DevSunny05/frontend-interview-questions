@@ -104,8 +104,26 @@ console.log(b)
 19.what is pure function
 20.what are diff arry manupulation methods
 21.why javascript is called interpreted language
-22.what is event capturing and event bubling
-23.what is shaddow coppy
+22.what is event bubling and event capturing
+23.what are diff datatype in js
+24.deep and shallow copy
+25.diff between == and ===
+26.explain explicit type coerission
+27.js is statically type or dynamically type
+28.what is NaN
+29.explain pass by value and pass by refrance
+30.what is immediate invoke function
+31.what do you mean by strict mode in js
+32.what is call bind and apply
+33.what is currying
+34.what is scope and scope chain
+35.what is  dom
+36.what is bom
+37.what is recurssion
+38.what is memoization
+39.what are the type of error in js
+40.
+
 
 
 
