@@ -104,6 +104,8 @@ console.log(b)
 19.what is pure function
 20.what are diff arry manupulation methods
 21.why javascript is called interpreted language
+22.what is event capturing and event bubling
+23.what is shaddow coppy
 
 
 
