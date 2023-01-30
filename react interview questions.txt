@@ -122,7 +122,7 @@ console.log(b)
 37.what is recurssion
 38.what is memoization
 39.what are the type of error in js
-40.
+40.what is pass by value and pass by refrance
 
 
 
