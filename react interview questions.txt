@@ -71,6 +71,7 @@ React interview Question
 70.what is react saga
 71.how react saga work
 72.What is the use of refs?
+73.diff between render and hydrate
 
 
 Javascript imterview question
@@ -123,6 +124,9 @@ console.log(b)
 38.what is memoization
 39.what are the type of error in js
 40.what is pass by value and pass by refrance
+41.what is callback hell
+42.what is diff types of function we have in js
+43.how to make copy of javascript object
 
 
 
@@ -134,6 +138,7 @@ HTML interview question
 4.what is event bubling
 5.diff between local and session storage
 6.what is diff between script async and script differ
+7.what is the use of doctype
 
 
 CSS interview question
