@@ -1,0 +1,141 @@
+React-redux-saga
+
+Redux:library for state management or library for global data management.redux is predictable state container.
+can share data to any component
+
+Saga:Handle async data in reux like Apis data.
+we call ite middleware
+middleware between reacting and redux
+here we can write async operation like time taking logics and api calls
+
+Actions:actions are plain functions.
+get data from reactjs.
+send data to reducer after process
+must have type key in return statement
+must sync type with reducer
+
+
+Reducer:Reducer handle data for store
+update data in store
+need root reducer
+reducer must return some value
+it must have initial value
+
+
+first you have to create react app and some dependency in it like npx i redux react-redux redux-saga
+wrap your react app inside wrapper called provide and connect with store by importing store <Provoder store={store}>
+
+we create folder of redux which consist of action.js reducer.js rootReducer.js and store.js files
+
+==========================================================================================================================
+In store.js file we create store by importing createstore method from redux and store into variable and export the store
+inside create store we passed rotoReducer
+
+import {createStore} from 'redux'
+import rootReducer from './rootReducer'
+
+const store=createStore(
+    rootReducer
+)
+
+export default store;
+
+=============================================================================================================================
+In action.js file we create normal function which recive data from react app.
+Action return data to reducer.js which consist of type and data in form of object
+
+import {ADD_TO_CART} from './constant'
+
+export const addToCart=(data)=>{
+    console.log("action is called",data)
+    return{
+        type:ADD_TO_CART,
+        data:data
+    }
+}
+=================================================================================
+In rootReducer file we import combine reducer method and all the redducers
+we pass all the reducers in combineReducer method and export it.
+
+export default combineReducers({
+    cartData
+})
+
+=================================================================================
+There is a file constant is created which is common in action and reducer files.
+which consist of common type between action and reducers which connect both of them
+
+export const ADD_TO_CART='ADD_TO_CART';
+==================================================================================
+In store createStore method are deprecated so we have to install redux toolkit package and use configureStore inplace of
+createStore 
+
+import {configureStore} from '@reduxjs/toolkit'
+import rootReducer from './rootReducer'
+
+const store=configureStore(
+   {
+    reducer: rootReducer
+   }
+)
+
+export default store;
+
+========================================================================================
+To handle async operation we require middleware called saga so install its package by npm - resux-saga
+After  that create saga file for perticular action
+Action will call saga function using type command and 
+this will run function in saga whic call apis then request conver into json obj and store into variable.
+data will directly send to reducer through saga by using diff type
+
+saga file
+---------
+import {put, takeEvery} from 'redux-saga/effects'
+import { PRODUCT_LIST, SET_PRODUCT_LIST } from './constant';
+
+function* getProducts(){
+     let data=yield fetch('http://localhost:3500/product')
+    data=yield data.json()
+    yield put({type:SET_PRODUCT_LIST,data})
+    
+}
+
+
+function* productSaga(){
+yield takeEvery(PRODUCT_LIST,getProducts)
+}
+
+export default productSaga;
+------------
+action file
+
+import { PRODUCT_LIST,  } from "./constant"
+
+
+export const productList=()=>{
+    console.log("action is called",)
+   
+    return{
+        type:PRODUCT_LIST,
+       
+    }
+}
+------------
+Reducer file
+
+import {  SET_PRODUCT_LIST } from "./constant";
+
+export const productData = (data = [], action) => {
+  console.log("reducer called", action);
+  switch (action.type) {
+    
+    case SET_PRODUCT_LIST:
+      // add to cart logic
+      return [...data, action.data];
+
+    default:
+      return data;
+  }
+};
+
+=========================================================================

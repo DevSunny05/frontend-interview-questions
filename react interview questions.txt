@@ -72,6 +72,9 @@ React interview Question
 71.how react saga work
 72.What is the use of refs?
 73.diff between render and hydrate
+74.diff between saga and thunk
+76.explain flow of redux saga
+77.which algorithem react uses
 
 
 Javascript imterview question
