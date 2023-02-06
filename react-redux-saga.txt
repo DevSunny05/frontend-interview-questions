@@ -16,6 +16,7 @@ must sync type with reducer
 
 
 Reducer:Reducer handle data for store
+it takes initial state and data comming from action or saga and return new state to store.
 update data in store
 need root reducer
 reducer must return some value
