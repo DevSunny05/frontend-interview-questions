@@ -44,7 +44,7 @@ React interview Question
 43.what is higher order component
 44.what is react
 45.what is single page application
-46.when do you use single and double page application
+46.when do you use single and double page application  
 47.what is rest and spread operator
 48.whtat is component lifecycle method in react
 49.what is useContext hook in react
@@ -54,7 +54,7 @@ React interview Question
 53.write down the function of cloure
 54.when we use call,apply,bind
 55.whai is this keyword
-56.write code for usecontext to pass adat from parent component to nth child component
+56.write code for usecontext to pass data from parent component to nth child component
 57.what are portals in react
 58.what are key concept in react
 59.what do you mean by lifting a state

@@ -22,6 +22,14 @@ need root reducer
 reducer must return some value
 it must have initial value
 
+========================================================================================================
+
+flow:Action dispatch from client side goes to action.js folder where it take data and send type and data object to store.
+In store rootReducer is there which is coonected with all reducers.Data has been send to all reducers.
+if ant reducers matches type which is written in reducer and data then it perforn logic and return updated satate to store.
+using useselector we recive that data to client side.
+=========================================================================================================
+
 
 first you have to create react app and some dependency in it like npx i redux react-redux redux-saga
 wrap your react app inside wrapper called provide and connect with store by importing store <Provoder store={store}>
