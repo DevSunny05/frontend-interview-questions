@@ -142,6 +142,8 @@ HTML interview question
 5.diff between local and session storage
 6.what is diff between script async and script differ
 7.what is the use of doctype
+8.Can you explain the use of alt tags for images?
+9.
 
 
 CSS interview question
@@ -163,3 +165,5 @@ CSS interview question
 16.Can you explain the CSS pseudo-classes (:hover, :active, :focus, etc.) and their uses?
 17.Can you explain CSS media queries and how they work?
 18.Can you explain the CSS z-index property and its uses?
+19.How would you create an ordered or unordered list in HTML?
+20.Can you explain the use of HTML meta tags?
