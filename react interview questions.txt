@@ -157,3 +157,9 @@ CSS interview question
 10.how to find weather browser supports grid or flex feature
 11.what is diff bet block level and inline
 12.diff bet flex and grid
+13.Can you explain the difference between responsive and adaptive design?
+14.Can you explain the CSS float property and how it works?
+15.Can you explain the difference between visibility:hidden and display:none?
+16.Can you explain the CSS pseudo-classes (:hover, :active, :focus, etc.) and their uses?
+17.Can you explain CSS media queries and how they work?
+18.Can you explain the CSS z-index property and its uses?
