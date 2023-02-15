@@ -36,7 +36,7 @@ React interview Question
 35.what is main feature of react
 36.what is server side rendering
 37.limitatins of react
-38.what is cintext hook
+38.what is context hook
 39.what is react fragment
 40.diff bet controlled and uncomtrolled component
 41.what is react router
@@ -75,6 +75,7 @@ React interview Question
 74.diff between saga and thunk
 76.explain flow of redux saga
 77.which algorithem react uses
+78.what is latest feature of react
 
 
 Javascript imterview question
@@ -134,7 +135,7 @@ console.log(b)
 46.How does prototypal inheritance work in JavaScript?
 47.What are some of the new features introduced in ES6 (ECMAScript 2015)?
 48.How can you optimize the performance of JavaScript code?
-49,
+49.what is latest feature of javascript
 
 
 
