@@ -79,16 +79,7 @@ React interview Question
 
 
 Javascript imterview question
-1. function output(){
-a=10
-let b=20;
-
-}
-output()
-what is the output of 
-console.log(a)
-console.log(b)
-
+1.
 2.what is hoisting in javascript
 3.what is closure in js
 4.write code for axios/fetch/
