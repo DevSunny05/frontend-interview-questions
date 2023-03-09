@@ -141,7 +141,7 @@ HTML interview question
 6.what is diff between script async and script differ
 7.what is the use of doctype
 8.Can you explain the use of alt tags for images?
-
+9.
 
 
 CSS interview question

@@ -1,0 +1,26 @@
+1.What is React Native?
+
+React Native is an open-source mobile application development framework that allows developers to build mobile applications
+ for iOS, Android, and other platforms using JavaScript and the React UI library. It was created by Facebook 
+
+2.How is React Native different from React?
+
+React:
+
+React is used for building web applications
+ React uses CSS to style its components
+ React has a standard set of components, such as div, span, and input, that are used to create web UIs.
+React is optimized for web development.
+ React uses a simple development workflow that allows developers to quickly build and iterate on web UIs.
+
+Native:
+
+ React Native is used for building mobile applications for iOS and Android.
+ React Native uses a custom style sheet syntax that is similar to CSS but is optimized for mobile development.
+React Native has a different set of components, such as View, Text, and Image, that are used to create mobile UIs.
+React Native is optimized for mobile development and has native performance characteristics,
+React Native has a more complex development workflow that involves compiling the code into native code and running it on a mobile device or simulator.
+
+
+
+
