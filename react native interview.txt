@@ -22,5 +22,122 @@ React Native is optimized for mobile development and has native performance char
 React Native has a more complex development workflow that involves compiling the code into native code and running it on a mobile device or simulator.
 
 
+3.Can you explain the architecture of a React Native app?
+
+
+View layer: The view layer is responsible for rendering the UI and responding to user interactions.
+ In React Native, the view layer is implemented using platform-specific components such as View, Text, and Image.
+
+State layer: The state layer is responsible for managing the state of the application and responding to user actions.
+ In React Native, state is managed using the component state and props, which are similar to the concept of state and props in React.
+
+Data layer: The data layer is responsible for managing the data used by the application.
+ This includes fetching data from external sources such as APIs and databases, and storing data locally in the application.
+ In React Native, data can be managed using third-party libraries such as Redux or MobX.
+
+4.Can you explain the architecture of a React Native app?
+5.What is the difference between a stateful and stateless component in React Native?
+6.What is JSX?
+
+7.How do you render a component in React Native?
+
+Create a new component file or use an existing one. For this example, we will create a new component called MyComponent:
+In the file where you want to render the component, import the MyComponent component
+In the return statement of the App component, include the MyComponent component by using the component tag:
+
+
+8.What is the role of a virtual DOM in React Native?
+
+9.What is the difference between React Native and other mobile app development frameworks?
+
+1.Cross-platform development: React Native allows developers to build mobile apps for both iOS and Android using a single codebase,
+ whereas other frameworks may require separate codebases for each platform.
+
+2.Native components: React Native uses native components that are specific to each platform, which allows apps built with React Native to have a more native look and 
+feel than apps built with other frameworks.
+
+3.JavaScript: React Native uses JavaScript, which is a popular and widely-used programming language,
+ whereas other frameworks may use languages that are less commonly used.
+
+4.Performance: React Native is designed to be highly performant, with features like the virtual DOM and JIT compilation,
+ which can help improve the speed and responsiveness of the app.
+
+5.Community: React Native has a large and active community of developers, which means that there are many resources available for learning and troubleshooting,
+ as well as a large ecosystem of libraries and tools.
+
+
+10.How do you handle user input in React Native?
+
+Handling button clicks:onPress={onPressButton}
+
+Handling text input:<TextInput value={text} onChangeText={onChangeText} />
+
+11.How do you style a React Native component?
+
+12.What is a props in React Native?
+13.What is a state in React Native?
+14.How do you pass data between components in React Native?
+15.What is the difference between componentWillMount and componentDidMount in React Native?
+
+componentWillMount is called before the component is rendered for the first time. 
+It is used to perform any setup that needs to happen before the component is mounted, such as initializing state, setting up event listeners, or making API calls.
+
+
+componentDidMount is called after the component is rendered for the first time.
+ It is used to perform any actions that need to happen after the component is mounted, such as starting animations, fetching data from an API, or setting up event listeners.
+
+16.What is Redux, and how is it used in React Native?
+17.What are the benefits of using Redux in a React Native app?
+
+18.How do you use AsyncStorage in React Native?
+ asynchronous, persistent, key-value storage system provided by React Native that allows you to store data in the app's local storage.
+ uses the setItem method of AsyncStorage to store a key-value pair. 
+getData that uses the getItem method of AsyncStorage to retrieve the value associated with a given key. 
+
+
+19.What is the role of FlatList in React Native?
+
+FlatList is a core component in React Native that is used to display a scrolling list of items. 
+1.Renders only the visible items: FlatList uses a technique called "windowing" to only render the items that are currently visible on the screen.
+2.Virtualized: FlatList is a virtualized list, which means that it only renders the items that are currently visible on the screen.
+ As the user scrolls through the list, FlatList dynamically renders and unrenders items to keep the memory usage low.
+3.Customizable: FlatList is highly customizable and allows you to control the rendering of the items, the appearance of the scroll bar, the layout of the list
+4.Supports horizontal scrolling: FlatList can also be used to create a horizontal scrolling list, where the items are laid out in a row rather than a column.
+
+20.What is the role of ScrollView in React Native?
+
+The ScrollView component in React Native provides a way to create a scrollable view that can display a large number of items or content that is larger than the screen size.
+ It is similar to the HTML element <div> with the overflow property set to scroll or auto. Here are some key features of ScrollView:
+
+1.Vertical scrolling: ScrollView can be used to create a vertical scrolling view that allows users to scroll up and down to view all the content.
+
+2.Customizable: ScrollView is highly customizable and allows you to control the appearance of the scroll bar, the layout of the content, and more.
+
+3.Supports horizontal scrolling: ScrollView can also be used to create a horizontal scrolling view, where the content is laid out in a row rather than a column.
+
+4.Lazy loading: ScrollView can be used to implement lazy loading, where only the visible content is loaded and rendered at a given time,
+ and the rest of the content is loaded as the user scrolls.
+
+21.What is the difference between FlatList and ScrollView in React Native?
+Both FlatList and ScrollView components in React Native are used to display a large amount of content that exceeds the available space on the screen.
+ However, there are some key differences between them:
+
+Rendering efficiency: FlatList is more efficient than ScrollView for rendering large lists of data. FlatList renders only the items that are currently visible on the screen,
+ while ScrollView renders all the items, even if they are not visible.
+
+Lazy loading: FlatList supports lazy loading, which means that it can load and render only a small subset of the data at a time,
+ and load more data as the user scrolls. ScrollView does not support lazy loading.
+
+Performance: FlatList is designed to optimize the performance of rendering lists by recycling the off-screen components,
+ which helps to reduce memory usage and improve performance. ScrollView does not provide this optimization.
+
+Flexibility: ScrollView is more flexible than FlatList in terms of layout and content.
+ ScrollView can handle a variety of content types, including images, text, and other custom components, while FlatList is mainly designed to render homogeneous lists of data.
+
+
+
+
+
+
 
 
