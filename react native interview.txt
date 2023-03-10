@@ -135,6 +135,60 @@ Flexibility: ScrollView is more flexible than FlatList in terms of layout and co
  ScrollView can handle a variety of content types, including images, text, and other custom components, while FlatList is mainly designed to render homogeneous lists of data.
 
 
+22.What is the role of TouchableOpacity in React Native?
+
+The TouchableOpacity component in React Native is used to create touchable elements in the user interface.
+ It is similar to the standard HTML button element in web development.
+
+The TouchableOpacity component provides a way to add touchable behavior to other components, such as text, images, and custom components.
+ When the user presses the component, it becomes slightly transparent,
+ which gives the user feedback that the component is being pressed. When the user releases the component, the onPress callback function is called.
+
+23.How do you use an API in React Native?
+To use an API in React Native, you need to make an HTTP request to the API endpoint and then process the response data.
+ Here's an example of how to make an API call using the fetch() function in React Native:
+
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error)
+  });
+
+24.What is the role of React Native Bridge?
+The React Native Bridge is a feature of React Native that enables communication between the JavaScript code running in the React Native app and the native code running on the device.
+ It's what allows React Native to use native UI components and access native device features.
+
+25.What is the role of Flexbox in React Native?
+
+Flexbox is a layout system used in React Native to define how UI components should be arranged on the screen.
+ It provides a simple and powerful way to create complex layouts that work well on different screen sizes and orientations.
+By using these Flexbox properties, developers can create responsive and adaptive layouts that automatically adjust to different screen sizes and orientations.
+ Flexbox is a powerful tool for building mobile user interfaces in React Native and is widely used by React Native developers.
+
+26.How do you use Flexbox to create a layout in React Native?
+27.What is the difference between Flexbox and CSS Grid?
+
+28.How do you create animations in React Native?
+Import the necessary components: Import the Animated and Easing modules from React Native.
+Create an animated value: Use the Animated.Value() method to create an animated value that you will use to animate your component.
+Configure the animation: Use the Animated.timing() method to configure the animation, specifying the duration, easing function, and other properties.
+Apply the animation to a component: Use the animated value to set a style property on the component that you want to animate. 
+ 
+
+29
+
+
+
+
+
+
+
+
+
+
 
 
 
