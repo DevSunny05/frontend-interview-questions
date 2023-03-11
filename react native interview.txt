@@ -178,7 +178,7 @@ Configure the animation: Use the Animated.timing() method to configure the anima
 Apply the animation to a component: Use the animated value to set a style property on the component that you want to animate. 
  
 
-29
+
 
 
 
