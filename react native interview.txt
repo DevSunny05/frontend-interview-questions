@@ -155,7 +155,7 @@ fetch('https://api.example.com/data')
   })
   .catch(error => {
     console.error(error)
-  });
+  })
 
 24.What is the role of React Native Bridge?
 The React Native Bridge is a feature of React Native that enables communication between the JavaScript code running in the React Native app and the native code running on the device.
