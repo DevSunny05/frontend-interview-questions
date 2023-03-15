@@ -6,7 +6,7 @@ What is a callback function in Node.js?
 What is the difference between setTimeout() and setInterval()?
 How do you create a server in Node.js?
 What is an event in Node.js?
-What is the difference between EventEmitter and Stream in Node.js?
+1.What is the difference between EventEmitter and Stream in Node.js?
 What is middleware in Node.js?
 What is Express.js?
 How do you handle errors in Node.js?
