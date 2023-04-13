@@ -37,7 +37,7 @@ React interview Question
 36.what is server side rendering
 37.limitatins of react
 38.what is context hook
-39.what is react fragment
+39.what is react fragment.
 40.diff bet controlled and uncomtrolled component
 41.what is react router
 42.what is redux
@@ -67,22 +67,22 @@ React interview Question
 66.error boundries in react
 67.what is transpiler and bundler
 68.what is keys in react
-69.what is dispatcher and how it is work
+69.what is dispatcher and how it is work              
 70.what is react saga
 71.how react saga work
-72.What is the use of refs?
+72.What is the use of refs?.
 73.diff between render and hydrate
 74.diff between saga and thunk
 76.explain flow of redux saga
 77.which algorithem react uses
-78.what is latest feature of react
+78.what is latest feature of react                         
 
 
 Javascript imterview question
 1.
 2.what is hoisting in javascript
 3.what is closure in js
-4.write code for axios/fetch/
+4.write code for axios/fetch/      const res= await axios.get("https://......");     const res=await fetch("");const data=await res.json();
 5.what is the purpose of callback
 6.what is arrow function
 7.what is this keyword
@@ -90,7 +90,7 @@ Javascript imterview question
 9.what is synchronous and asynchronous
 10.diff between for in and for of
 11.whai is higher order component
-12.diff between session storage and local storage
+12.diff between session storage and local storage           
 13.what is diff between async and script defer
 14.new feature introduce in es6
 15.diff bet map and for each
@@ -99,7 +99,7 @@ Javascript imterview question
 18.what is callback fiction
 19.what is pure function
 20.what are diff arry manupulation methods
-21.why javascript is called interpreted language
+21.why javascript is called interpreted language 
 22.what is event bubling and event capturing
 23.what are diff datatype in js
 24.deep and shallow copy
@@ -124,7 +124,7 @@ Javascript imterview question
 43.how to make copy of javascript object
 45.What is the event loop in JavaScript, and how does it work?
 46.How does prototypal inheritance work in JavaScript?
-47.What are some of the new features introduced in ES6 (ECMAScript 2015)?
+47.What are some of the new features introduced in ES6 (ECMAScript 2015)
 48.How can you optimize the performance of JavaScript code?
 49.what is latest feature of javascript
 

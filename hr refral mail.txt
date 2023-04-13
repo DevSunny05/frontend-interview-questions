@@ -1,0 +1,33 @@
+
+
+Hi 
+Hope you are doing great!!
+
+I am Sarang Patil from Pune. Currently I am looking for opportunity as full stack or frontend developer with hand on experience
+on the technology React,JavaScript,HTML5,CSS3 in frontend and NodeJs,ExpressJs,MongoDB in backend.
+
+I also have good knowledge of Redux tool as third party library for state management and for style other than CSS3 I have hand on experience
+on TailwindCSS,React-Bootstarp,MaterialUI,Styled-component
+
+I was also work on tool such as JIRA, Postman,Git+GitHub.
+
+So If you have any job vacancy in your compony please consider my application, I will be very greatfull.
+You can check my work on my portfolio website or on github which I have share the details and link below.
+
+
+
+Thanks & Regards,
+Sarang Patil.
+
+
+Name:- Sarang Patil
+Contact no :- 8806657793
+E-mail ID:- patilsarang177@gmail.com
+Portfolio-website:- https://sarang-patil.netlify.app/
+Github :- https://github.com/DevSunny05
+Current location:- Pune
+Preferred location:- Pune, Mumbai, banglore, Hyderabad,Delhi
+
+
+
+
