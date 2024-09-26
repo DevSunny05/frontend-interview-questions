@@ -1,0 +1,43 @@
+
+If you're preparing for a TypeScript interview, it's a good idea to be ready for a mix of conceptual, technical, and practical questions. Here are some TypeScript interview questions to help you prepare:
+
+Basic Concepts:
+What is TypeScript, and how is it different from JavaScript?
+What are the benefits of using TypeScript?
+Explain the role of type inference in TypeScript.
+What are primitive types in TypeScript?
+What is the any type in TypeScript?
+Explain the unknown type and how it differs from any.
+How do you declare and use interfaces in TypeScript?
+What is a tuple in TypeScript?
+
+Advanced Concepts:
+What is type assertion in TypeScript, and how is it used?
+How do you define a union type and an intersection type?
+What are generics in TypeScript, and how are they used?
+Explain the readonly keyword in TypeScript.
+How do you use conditional types in TypeScript?
+What is the purpose of the unknown type in TypeScript?
+Explain the never type in TypeScript.
+How do you implement method overloading in TypeScript?
+
+Practical Usage:
+How do you enable strict type-checking in a TypeScript project?
+How do you handle optional parameters in TypeScript?
+What is a module in TypeScript? Explain the difference between import and export.
+How do you handle asynchronous operations in TypeScript?
+How do you use TypeScript with Node.js?
+What are type declarations, and how do you use them?
+Explain the purpose and usage of namespace in TypeScript.
+How do you use decorators in TypeScript?
+
+Debugging and Maintenance:
+What are the most common TypeScript errors you've encountered, and how do you fix them?
+How do you handle debugging in a TypeScript project?
+What tools and libraries do you use for TypeScript development?
+
+Miscellaneous:
+Explain how to integrate TypeScript with a build tool like Webpack or Parcel.
+How do you configure and use type-checking tools (e.g. tsc, ESLint) in a TypeScript project?
+What is the role of tsconfig.json in a TypeScript project?
+Have you worked with type-checking utilities like ts-node or ts-loader? Explain how you used them.

@@ -1,0 +1,107 @@
+Basic Next.js Questions
+What is Next.js?
+How does Next.js differ from React.js?
+What are the benefits of using Next.js?
+What is server-side rendering (SSR) in Next.js?
+What is static site generation (SSG) in Next.js?
+How does Next.js support SEO better than a regular React app?
+What is the pages directory in Next.js, and how does it work?
+How do you create a dynamic route in Next.js?
+What is the difference between getStaticProps and getServerSideProps in Next.js?
+What is getInitialProps and how is it different from getStaticProps and getServerSideProps?
+How can you fetch data at build time in Next.js?
+Explain Incremental Static Regeneration (ISR) in Next.js.
+What is the Link component in Next.js, and how does it improve navigation?
+How does Next.js handle API routes?
+What is a custom document in Next.js, and when would you use it?
+How do you set up custom routing in Next.js?
+What are Next.js plugins, and how do they work?
+How can you implement client-side navigation in Next.js?
+What is the Head component in Next.js, and how do you use it?
+How can you add global CSS in a Next.js project?
+Intermediate Next.js Questions
+What is the difference between server-side rendering (SSR) and static site generation (SSG)?
+How do you handle redirects in Next.js?
+How do you handle environment variables in Next.js?
+What is the next.config.js file, and what are its use cases?
+How does Next.js optimize images?
+What is next/image, and how does it differ from the standard HTML <img> tag?
+How can you implement lazy loading in Next.js?
+How do you manage state in a Next.js application?
+How does Next.js handle CSS Modules?
+How can you integrate a CSS-in-JS library like styled-components in Next.js?
+What is dynamic importing in Next.js, and when should you use it?
+How can you create custom error pages in Next.js?
+Explain the concept of fallback in dynamic routing with SSG.
+How do you implement authentication in a Next.js application?
+How can you deploy a Next.js app to Vercel?
+What is prefetching in Next.js, and how does it work?
+How can you add analytics to a Next.js project?
+How do you handle cookies in a Next.js application?
+How do you set up a custom 404 page in Next.js?
+What are the advantages of using TypeScript in a Next.js project?
+Advanced Next.js Questions
+What is the App component in Next.js, and how do you customize it?
+How does Next.js handle code splitting?
+Explain the concept of static and dynamic routing in Next.js.
+How do you optimize performance in a Next.js application?
+How do you handle authentication and authorization in Next.js?
+What is the Document component in Next.js, and how is it different from the App component?
+How can you use Next.js with Redux for state management?
+How do you handle errors globally in a Next.js application?
+How do you implement middleware in Next.js?
+What are the best practices for handling SEO in a Next.js app?
+How can you use Next.js with GraphQL?
+How do you manage API calls in a Next.js project?
+How can you set up a custom server with Next.js?
+Explain the lifecycle methods in Next.js.
+How do you handle SSR caching in Next.js?
+How does Next.js handle security vulnerabilities like XSS and CSRF?
+How can you set up a multi-language (i18n) site in Next.js?
+How do you create a PWA (Progressive Web App) with Next.js?
+What is the purpose of getStaticPaths in Next.js?
+How do you use Next.js with a headless CMS?
+Full-stack and API-related Next.js Questions
+How do you create API routes in Next.js?
+How do you handle RESTful APIs in Next.js?
+How does Next.js integrate with databases?
+How can you deploy a Next.js app with serverless functions?
+How do you handle authentication tokens in API routes?
+What are the use cases for serverless functions in Next.js?
+How can you use Prisma or Sequelize with Next.js?
+How do you handle file uploads in a Next.js API route?
+How do you protect API routes in Next.js?
+How can you optimize API routes in Next.js for performance?
+Testing and Debugging Next.js Questions
+How do you test a Next.js application?
+What testing libraries are commonly used with Next.js?
+How do you set up unit tests in Next.js?
+How do you set up end-to-end testing in Next.js?
+How can you debug a Next.js application?
+What tools can you use for logging in a Next.js project?
+How do you handle error boundaries in Next.js?
+How do you test API routes in Next.js?
+How do you handle deployment issues in Next.js?
+How do you manage testing for SSR and SSG pages in Next.js?
+Deployment and Production Next.js Questions
+What are the best practices for deploying a Next.js application?
+How do you deploy a Next.js app to AWS?
+How do you deploy a Next.js app with Docker?
+How do you deploy a Next.js app on Heroku?
+How do you configure environment variables for production in Next.js?
+How do you optimize your Next.js app for production?
+How does Next.js handle CDN and caching in production?
+What are the key differences between development and production builds in Next.js?
+How do you configure custom headers in Next.js for better security?
+How do you handle version control in a Next.js project?
+Miscellaneous Next.js Questions
+How does Next.js handle Webpack configurations?
+How can you use Tailwind CSS with Next.js?
+What are the best practices for managing large-scale Next.js applications?
+How does Next.js compare to other frameworks like Gatsby or Nuxt.js?
+How do you handle real-time data in Next.js?
+How can you integrate Next.js with third-party APIs?
+How do you use Next.js with Firebase?
+What are the performance metrics to monitor in a Next.js application?
+How does Next.js handle microservices architecture?
+What are some common challenges faced when working with Next.js, and how do you overcome them?

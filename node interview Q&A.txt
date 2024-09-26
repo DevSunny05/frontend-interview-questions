@@ -1,0 +1,51 @@
+1.What is nodejs??
+
+Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers
+to run JavaScript code on the server side. It is built on the V8 JavaScript engine.
+
+
+Key features and characteristics of Node.js include:
+1.JavaScript Runtime:
+2.Event-Driven and Asynchronous
+3.Single-Threaded:
+4.NPM (Node Package Manager):
+5.Wide Range of Modules:
+6.HTTP Server Capabilities:
+7.Cross-Platform:
+8.Scalability:
+
+2.how nodejs work or Explain the event-driven architecture of Node.js.
+
+Nodejs base on V8 engine.It is virtual machine that utilizes js as scripting lang and achive high output via non blocking i/o and single threaded event loop
+It uses an event loop to handle asynchronous operations, allowing it to efficiently manage multiple connections.
+
+3.Where can we use nodejs??
+Web Servers 
+Web Servers
+Real-Time Applications
+Microservices Architecture
+Command-Line Tools
+Single-Page Applications
+Content Management Systems
+Streaming Applications
+IoT (Internet of Things)
+Desktop Application
+Backend for Mobile Applications
+
+4.what are nodules in nodejs??
+Modules are like Javascript liabraries that can be use in Node.js application to include a set of function.
+To include module in nodejs applicatin use require() func with parantehis containing name of module.
+Nodejs has many module to provide functionality some of them are http,utils,fs,url,querystring,stream,zlib
+
+5.Why nodejs prefer over other backend technology???
+
+Nodejs is really fast
+NPM has over 50000 bundles for at the developers disposal
+perfect for data intensive,real time web applicatin as nodejs never wait for an API to return data
+Better syncranization of code between server and client due to same code base.
+East for developers to start using nodejs in their project as its JS library.
+
+
+
+
+

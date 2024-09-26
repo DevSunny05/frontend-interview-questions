@@ -1,4 +1,5 @@
 React interview Question
+
 1.what are the limitations of react
 2.what is one way data binding in react
 3.diff between state and props
@@ -21,8 +22,8 @@ React interview Question
 20.can we reuse functional component
 21.diff between class and function component
 22.what are the types of hooks
-23.what is the use of useMemo hook
-24.explain the flow of redux
+23.what is the use of useMemo  
+24.explain the flow of redux    
 25.what are promises
 26.what is prop drilling
 27.can we use multiple reducers in component
@@ -37,7 +38,7 @@ React interview Question
 36.what is server side rendering
 37.limitatins of react
 38.what is context hook
-39.what is react fragment.
+39.what is react fragment
 40.diff bet controlled and uncomtrolled component
 41.what is react router
 42.what is redux
@@ -78,11 +79,11 @@ React interview Question
 78.what is latest feature of react                         
 
 
-Javascript imterview question
-1.
+Javascript interview question
+1.what is js
 2.what is hoisting in javascript
 3.what is closure in js
-4.write code for axios/fetch/      const res= await axios.get("https://......");     const res=await fetch("");const data=await res.json();
+4.write code for axios/fetch/      const res= await axios.get("https://......");     const res=await fetch("");   const data=await res.json();
 5.what is the purpose of callback
 6.what is arrow function
 7.what is this keyword
@@ -124,9 +125,45 @@ Javascript imterview question
 43.how to make copy of javascript object
 45.What is the event loop in JavaScript, and how does it work?
 46.How does prototypal inheritance work in JavaScript?
-47.What are some of the new features introduced in ES6 (ECMAScript 2015)
+47.What are some of the new features introduced in ES6 (ECMAScript 2015)        
 48.How can you optimize the performance of JavaScript code?
 49.what is latest feature of javascript
+
+50.how to sort number array
+51.how to sort string array
+52.how to count duplicate elements in array
+53.how to find duplicate elements in array
+54.define class with constructor and methods
+55.define class inheritance
+56.how to find unique value in array
+67.find unique value in arry with sorted form
+68. how to find max value from array
+69. how to find avg of elememt in array
+70. make first char of string array into uppercase
+71.how find min value in array
+72 how to make sentence out of array
+73. how to check if given array contain element of another array
+74.given two string heck if they are anagram for each other
+75.how can you extract few field from json object and form new array
+76.filter current object base on certain conditin and return new object
+77.how to chech if variable passed is an array or not
+78.given an array of string reverse each word in sentence
+79.how to empty an array
+80.write func to check if given string is palindrom or not
+81.how can you combine two array into third using spread
+82.how do you sort or reverse arry without changing its orignal array
+83.how can we replace an element at specific index of an array
+84.how can we insert an element at specific index of an array
+85.how can we deletean element at specific index of an array
+86.how can we deletean specific element of an array
+87.how can we clone object
+88.how to add array at beggining of array
+89.how to remove ele at the end of array
+90.how to split sentence into array
+91.how can you replace existing element in an array
+92.how can you add an element to the obj
+93.how to remove ele at beginning of array
+94.how can you combine two obj
 
 
 
@@ -145,14 +182,15 @@ HTML interview question
 
 
 CSS interview question
+
 1.what is specificity in css
 2.what is box model in css
 3.position in css
 4.Absolute and relative position
-5.diff between display none and hidden
+5.diff between display none and hidden                                                                                                                                                        
 6.It is posible to change inline element into block
 7.what is the purpose of opacity
-8.sudo element and sudo class
+8.
 9.how to make div/element center
 10.how to find weather browser supports grid or flex feature
 11.what is diff bet block level and inline
