@@ -1,3 +1,85 @@
+Basic Questions:
+What is Node.js?
+How does Node.js differ from traditional server-side programming?
+What is the V8 JavaScript engine, and how does it relate to Node.js?
+What is an event loop in Node.js, and how does it work?
+Explain the concept of non-blocking I/O in Node.js.
+What are the main advantages of using Node.js?
+What are some use cases where Node.js is a good fit?
+What is npm, and how is it used in Node.js projects?
+How do you manage third-party packages in Node.js?
+What is the package.json file, and what is its purpose?
+What is the role of require in Node.js?
+What is a callback in Node.js, and why are callbacks important?
+What are Promises in Node.js? How do they improve asynchronous code?
+What are async/await in Node.js?
+What is the difference between setTimeout() and setImmediate() in Node.js?
+What is process.nextTick(), and how does it differ from setImmediate()?
+How does error handling work in Node.js?
+What is an error-first callback pattern?
+What is the difference between synchronous and asynchronous functions in Node.js?
+What is the global object in Node.js?
+Intermediate Questions:
+Explain the module system in Node.js. How do CommonJS and ES6 modules differ?
+What is the difference between exports and module.exports in Node.js?
+What are Streams in Node.js? What are the different types of streams?
+Explain how you can create a readable and writable stream in Node.js.
+How does Node.js handle file operations?
+What is fs module in Node.js? Can you show an example of reading a file asynchronously?
+What is the purpose of the http module in Node.js?
+How do you create a basic HTTP server using Node.js?
+What are middleware functions in Node.js, and how do they work?
+Explain the role of EventEmitter in Node.js. How do you use it?
+What are Buffers in Node.js, and how are they used?
+What is the purpose of cluster in Node.js?
+How do you implement process management in a Node.js application?
+What is the difference between spawn() and exec() in Node.js?
+What is the purpose of the os module in Node.js?
+What is REPL in Node.js?
+What is the util module in Node.js?
+What is the crypto module in Node.js? How is it used for encryption?
+What is CORS, and how do you handle CORS in Node.js applications?
+What is the purpose of dotenv in a Node.js project?
+Advanced Questions:
+Explain how clustering improves performance in a Node.js application.
+What is a child process in Node.js, and how can you use it?
+How can you implement authentication in a Node.js app using JWT (JSON Web Tokens)?
+What is the difference between horizontal and vertical scaling in Node.js?
+What is memory leak in Node.js, and how do you handle it?
+How do you handle concurrency in Node.js?
+What are worker threads in Node.js, and how are they different from child processes?
+How does Node.js handle security vulnerabilities such as cross-site scripting (XSS) or SQL injection?
+Explain how you can optimize the performance of a Node.js application.
+What is event-driven architecture, and how does Node.js utilize it?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 What is Node.js?
 How does Node.js differ from other server-side languages like PHP and Java?
 What is npm?

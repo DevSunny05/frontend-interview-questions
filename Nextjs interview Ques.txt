@@ -19,6 +19,8 @@ What are Next.js plugins, and how do they work?
 How can you implement client-side navigation in Next.js?
 What is the Head component in Next.js, and how do you use it?
 How can you add global CSS in a Next.js project?
+
+
 Intermediate Next.js Questions
 What is the difference between server-side rendering (SSR) and static site generation (SSG)?
 How do you handle redirects in Next.js?
@@ -40,6 +42,8 @@ How can you add analytics to a Next.js project?
 How do you handle cookies in a Next.js application?
 How do you set up a custom 404 page in Next.js?
 What are the advantages of using TypeScript in a Next.js project?
+
+
 Advanced Next.js Questions
 What is the App component in Next.js, and how do you customize it?
 How does Next.js handle code splitting?
