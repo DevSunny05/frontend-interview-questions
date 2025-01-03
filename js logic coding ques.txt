@@ -1,0 +1,286 @@
+1.console.log([] == []);
+console.log([] == "");
+
+2.let n = 10; // Declare a variable n and assign it the value 10
+console.log(n.toString(8));
+
+3.function a() {
+  console.log("hiii"); // This line logs "hiii" to the console
+}
+
+console.log(a()); 
+
+4.function abc() {
+  console.log("xyz");
+}
+
+console.log(abc.name); 
+
+5.var abc = 100;
+let xyz = 200;
+
+console.log(window.abc);
+console.log(window.xyz);
+
+6. "use strict"
+
+{
+    function abc(){
+        console.log("xyzzz")
+    }
+}
+
+abc()
+
+7.{
+    function abc(){
+        console.log("xyzzz")
+    }
+}
+
+abc()
+
+8.new xyz();
+
+function abc() {
+  console.log("abc");
+}
+
+class xyz {}
+
+9.const abc = 10 + isNaN(2)?100:200
+
+console.log(abc) 
+
+
+10.console.log(parseInt("")); 
+console.log(Number(""));
+
+11.diff between npm and npx
+
+12.what is  CDN
+
+13.html layouts
+
+14.diff between html and xhtml
+
+
+15.difff between flex and grid
+
+16.function abc(a) {
+  console.log(--a);
+}
+
+abc(2.8);
+
+
+17.const arr = [1, 300, 500, 1, 10];
+arr.sort();
+console.log(arr);
+
+18.function abc(a, b = 0, c) {}
+
+console.log(abc.length);
+
+
+19.function abc(a, b = 0, c, ...arg) {}
+
+console.log(abc.length);
+
+20.currying example
+
+21example of pure function and noemal function
+
+22.diff call bind apply
+
+23.const arr=[2,3,4,56,7]
+delete arr[1]
+
+console.log(arr.length)
+
+find lenght
+
+24.diff bet meter tag and progress tag
+
+25.image map in react
+
+26/display none and visible hidden
+
+
+27.how to add gradient
+
+28.function abc() {
+  console.log(abc.timeout);
+}
+
+abc();
+abc.timeout = 200;
+abc.timeout = 100;
+abc();
+
+29.console.log(2 - "2");
+console.log("2" - 2);
+
+30.console.log(2 - "2");
+console.log("2" - 2);
+
+31.console.log( NaN ===NaN);
+
+31.map state to props and map dispatch to props
+
+32.diff types of list in html
+
+
+33.let mix=[1,'a',3,4,"c","d"]
+
+let num=[]
+
+let str=[]
+
+
+{
+    mix.forEach((ele)=>{
+        if(typeof ele==="string"){
+            str.push(ele)
+        }else{
+            num.push(ele)
+        }
+    })
+}
+
+console.log(num)
+console.log(str)
+
+34.keyframes in css
+
+35.diff between virtual dom and real dom
+
+36.diff bet control and uncontroll comp
+
+37.principle of redux
+
+38.redux middleware
+
+39.diff bet asyn await and promice
+
+40.event deligation
+
+41.
+var arr1=["boy","oy"]
+var arr2=["ram","am"]
+var arr3=["Sarang","ar"]
+var arr4=["Ravi","vii"]
+
+function check(arr){
+    var ele1=arr[0]
+    var ele2=arr[1]
+    
+   if(ele1.includes(ele2)){
+       return true
+   }else{
+       return false
+   }
+}
+
+42.diff status codes
+
+43.how js work in browser
+
+44. const arr=[45,44,96,47,65,48]
+
+
+function bubbleSort(arr1){
+    
+    const copyArr=[...arr1]
+    
+    const len=copyArr.length
+    
+    for(let i=0;i<len-1;i++){
+        for(let j=0;j<len-i-1;j++){
+            if(copyArr[j]>copyArr[j+1]){
+                [copyArr[j],copyArr[j+1]]=[copyArr[j+1],copyArr[j]]
+            }
+        }
+    }
+    
+    return copyArr
+    
+}
+
+console.log(bubbleSort(arr))
+
+45.how to find duplicate elements in array
+
+const arr=[1,2,2,3,4,4,5,6,6]
+
+function checkDuplicate(arr){
+    const seen=new Set()
+     const duplicate=new Set()
+     
+     for(const ele of arr){
+         if(seen.has(ele)){
+             duplicate.add(ele)
+         }else{
+             seen.add(ele)
+         }
+     }
+     
+     return Array.from(duplicate)
+     
+     
+}
+
+console.log(checkDuplicate(arr))
+
+46.make first char of string array into uppercase
+
+const arr=["jan","feb","mar","apr"]
+
+const updatesArr=arr.map((ele)=>ele.charAt(0).toUpperCase()+ele.slice(1))
+
+console.log(updatesArr)
+
+47.min number in array
+
+const arr=[25,4,8,9,10,8,2]
+
+
+
+function findMin(arr){
+    
+    let min=arr[0]
+    for(let i=1;i<arr.length;i++){
+        if(arr[i]<min){
+            min=arr[i]
+        }
+    }
+    
+    return min
+}
+
+console.log(findMin(arr))
+
+48.how to check if given array contain element of another array
+
+const arr1=[25,4,8,9,10,8,2]
+
+const arr2=[12,45,89,65,2]
+
+const contaArr=arr1.map((ele)=>arr2.includes(ele))
+
+console.log(contaArr)
+
+49.given two string heck if they are anagram for each other
+
+const str1="ram"
+const str2="mar"
+
+function anargum(str1,str2){
+    const norm=(str)=>str.replace("/\s+/g","").toLowerCase().split("").sort().join()
+    
+    return norm(str1)===norm(str2)
+}
+
+50.
+
+console.log(anargum(str1,str2))

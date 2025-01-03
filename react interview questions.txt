@@ -125,7 +125,7 @@ Javascript interview question
 43.how to make copy of javascript object
 45.What is the event loop in JavaScript, and how does it work?
 46.How does prototypal inheritance work in JavaScript?
-47.What are some of the new features introduced in ES6 (ECMAScript 2015)        
+47.What are some of the new features introduced in ES6 (ECMAScript 2015)                             
 48.How can you optimize the performance of JavaScript code?
 49.what is latest feature of javascript
 
