@@ -1,0 +1,235 @@
+1.what is aws cloudfront
+
+AWS CloudFront is a Content Delivery Network (CDN) service provided by Amazon Web Services (AWS).
+ It accelerates the delivery of web content (such as HTML, CSS, JavaScript, images, and videos) to users by caching it at edge locations (data centers located around the world).
+-----------------------------------------------------------------------------------------------------------------------
+2.how does cloudfront enhance the performance of web application
+
+
+Global Edge Network – Delivers content from 300+ locations, reducing latency.
+
+Smart Caching – Stores static/dynamic content closer to users for faster load times.
+
+HTTP/2 & QUIC Support – Improves parallel loading and connection efficiency.
+
+Compression (Gzip/Brotli) – Reduces file sizes for quicker transfers.
+
+Persistent Connections – Lowers TCP overhead with keep-alive sessions.
+
+Anycast Routing – Uses Amazon’s high-speed backbone for optimal paths.
+
+Origin Shield – Reduces origin server load with an extra caching layer.
+
+Pre-Warming & Byte-Range Requests – Optimizes large file/video delivery.
+
+Lambda@Edge – Enables dynamic content processing at the edge.
+
+AWS Integrations – Works seamlessly with S3, ALB, API Gateway, and more.
+-----------------------------------------------------------------------------------------------------------------------------
+3.what is the purpose of origin in cloudfront
+
+The origin in AWS CloudFront is the primary source of your content—where CloudFront fetches files if they aren't already cached at an edge location.
+ It acts as the "backend" for your CDN distribution.
+-----------------------------------------------------------------------------------------------------------------------------
+
+4.how does CloudFront handle security and encryption
+
+
+AWS CloudFront provides multi-layered security for content delivery, ensuring protection against attacks, unauthorized access, and data breaches.
+
+🔐 Core Security Features:
+Encryption
+
+HTTPS (TLS 1.2/1.3) by default with free AWS-managed SSL certificates.
+
+End-to-end encryption (CloudFront → Origin).
+
+Field-Level Encryption for sensitive data (e.g., credit card numbers).
+
+Access Control
+
+Signed URLs/Cookies for private content.
+
+Origin Access Control (OAC) to block direct S3 access.
+
+Geo-Restriction to allow/block countries.
+
+DDoS & Threat Protection
+
+AWS Shield Standard (free) and Advanced (paid).
+
+AWS WAF integration to block SQLi, XSS, bots, and OWASP Top 10 threats.
+
+Monitoring & Compliance
+
+CloudFront Access Logs (request tracking).
+
+AWS CloudTrail (audit API changes).
+
+Real-time metrics via CloudWatch.
+
+Advanced Security
+
+Lambda@Edge for dynamic authentication.
+
+Security headers (CSP, X-Frame-Options) for anti-XSS/clickjacking.
+
+-----------------------------------------------------------------------------------------------
+5.what is the significance of adistribution in cloudfront
+ A distribution is the core configuration unit in AWS CloudFront that defines how content is delivered to end users.
+ It acts as the gateway between your origin servers (where content is stored) and the global network of CloudFront edge locations.
+
+------------------------------------------------------------------------------------------------
+6.can CloudFront be use for both static and dynamic content
+
+Yes! AWS CloudFront is designed to accelerate both static and dynamic content by leveraging caching, edge computing, and optimized routing.
+
+------------------------------------------------------------------------------------------------
+7.what is ttl in CloudFront and how does it impact caching
+
+ TTL (Time to Live) defines how long CloudFront caches content at its edge locations before checking the origin for updates.
+ It controls cache freshness and directly impacts performance, cost, and content consistency.
+--------------------------------------------------------------------------------
+8.what is TTL in CloudFront and how does it impact caching
+TTL (Time to Live) defines how long CloudFront caches content at its edge locations before checking the origin for updates.
+ It controls cache freshness and directly impacts performance, cost, and content consistency.
+
+----------------------------------------------------------------------------------------------------
+9.how does cloudfront integrate with aws waf
+  AWS CloudFront integrates seamlessly with AWS WAF (Web Application Firewall) to protect web applications from common threats like SQL injection, cross-site scripting (XSS), DDoS attacks, and malicious bots.
+----------------------------------------------------------------------------------------------------
+10.what is the benifits of sign url or signed cookies in cloudfront
+WS CloudFront’s Signed URLs and Signed Cookies provide secure, time-limited access to private or restricted content. 
+They are essential for controlling who can access your content and for how long. 
+---------------------------------------------------------------------------------------------------
+11.can cloudfront be use it with other aws services and if so how
+AWS CloudFront seamlessly integrates with multiple AWS services to enhance performance, security, and scalability for web applications, APIs, and media delivery.
+
+🔹 Key Integrations & Benefits
+S3 → Global static content caching (websites, media).
+
+EC2/ALB/NLB → Accelerates dynamic apps & APIs.
+
+Lambda@Edge → Runs serverless functions at the edge (auth, redirects, A/B testing).
+
+API Gateway → Caches API responses, reduces backend load.
+
+AWS WAF/Shield → Blocks DDoS, SQLi, XSS attacks.
+
+MediaPackage/MediaStore → Low-latency video streaming (HLS/DASH).
+
+RDS/DynamoDB → Caches database-driven content.
+
+Global Accelerator → Optimizes network routing for ultra-low latency.
+---------------------------------------------------------------------------------------------------
+12.what is regional cache server and how it is diff fron edge location cache server
+
+1. Edge Location Cache
+What It Is
+Ultra-fast, micro-caches deployed in 300+ locations worldwide (e.g., Tokyo, London, NYC).
+
+Closest to end users for minimum latency (millisecond response times).
+
+Key Features
+✔ Lowest Latency: Serves cached content from the nearest edge.
+✔ Static & Dynamic Content: Can cache both (dynamic content with short TTLs).
+✔ High Churn: Frequently purges less-popular content to free up space.
+
+
+
+2. Regional Cache (Regional Edge Cache)
+What It Is
+Larger, persistent caches in 13+ AWS Regions (e.g., us-east-1, eu-west-1).
+
+Acts as a mid-tier cache between edge locations and the origin.
+
+Key Features
+✔ Higher Capacity: Stores more content than edge locations.
+✔ Longer Retention: Keeps objects cached longer, even if unused at edge locations.
+✔ Reduces Origin Load: If an edge location misses a cache, it checks the regional cache first.
+
+
+How They Work Together
+User Request:
+
+First checks the nearest edge location.
+
+If not found (cache miss), checks the regional cache.
+
+If still not found, fetches from the origin server (e.g., S3, EC2).
+
+----------------------------------------------------------------------------------------------------------
+
+13.what is geo locaton in aws
+
+Geo Location in AWS refers to identifying and restricting access to content based on a user's geographic location (country/region).
+ It’s commonly used for compliance, licensing, or security purposes.
+------------------------------------------------------------------------------------------------------------
+14.what are the uses of aws cludfront
+
+AWS CloudFront is a global Content Delivery Network (CDN) that accelerates content delivery with low latency, high security, and scalability.
+1. Website Acceleration
+2. API Acceleration
+3. Video & Live Streaming
+4. Software & Game Downloads
+5. Security & DDoS Protection
+6. Private Content Delivery
+7. Edge Computing (Lambda@Edge)
+8. Hybrid Cloud Content Delivery
+-----------------------------------------------------------------------------------------------------
+15.Does AWS CloudFront (CDN) Include Built-in Digital Rights Management (DRM)?
+No, AWS CloudFront itself does not natively include Digital Rights Management (DRM) as part of its core CDN functionality.
+ However, it integrates seamlessly with AWS and third-party DRM solutions to secure premium content.
+---------------------------------------------------------------------------------------------------------------
+16.how to diasable cache for cludfront
+
+Method 1: Use the "CachingDisabled" Managed Policy (Recommended)
+This is the easiest way to disable caching for a CloudFront distribution.
+
+Steps:
+Go to AWS CloudFront Console → Distributions.
+
+Select your distribution → Behaviors tab.
+
+Edit or create a Cache Behavior.
+
+Under Cache Policy, select:
+
+CachingDisabled (Predefined AWS policy).
+
+Save changes.
+
+✅ Effect:
+
+CloudFront forwards every request to the origin (no caching).
+
+Best for APIs, dynamic content, or real-time data.
+
+Method 2: Custom Cache Policy (TTL = 0)
+If you need more control, create a custom cache policy with Min TTL = 0.
+
+Steps:
+Go to CloudFront Console → Policies → Cache Policies.
+
+Click Create Cache Policy.
+
+Set:
+
+Minimum TTL = 0 (disables caching).
+
+Default TTL = 0.
+
+Maximum TTL = 0.
+
+Attach this policy to your Cache Behavior.
+
+✅ Effect:
+
+Similar to CachingDisabled but allows customization.
+---------------------------------------------------------------------------------------------
+
+17.what are cludfront invalidations
+
+AWS CloudFront invalidations allow you to forcibly remove cached content from CloudFront's edge locations before it expires naturally.
+ This ensures users receive the latest version of your files immediately.
+-----------------------------------------------------------------------------------------------

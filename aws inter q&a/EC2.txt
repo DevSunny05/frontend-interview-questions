@@ -1,0 +1,386 @@
+
+
+EC2
+
+1.what is EC2
+	
+ Amazon EC2 (Elastic Compute Cloud) is a core service offered by Amazon Web Services (AWS) that provides scalable, on-demand virtual computing resources in the cloud.
+ It allows users to rent virtual servers (called instances) and manage computing capacity without investing in physical hardware.
+
+Key Features of Amazon EC2:
+1.Virtual Servers (Instances)
+2.Scalability:
+3.Flexible Pricing Models:
+4.Security & Networking
+5.Storage Options:
+6.Operating System & Software Choices
+7.Global Availability:
+
+Common Use Cases for EC2:
+1.Hosting websites & web applications.
+
+2.Running cloud-native and enterprise applications.
+
+3.Big data processing & machine learning workloads.
+
+4.Game servers and high-performance computing (HPC).
+
+5.Disaster recovery & backup solutions.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+2.What is an instance??
+	An EC2 Instance is a virtual server in Amazon's Elastic Compute Cloud (EC2) that provides scalable computing capacity in the AWS cloud.
+ It functions like a traditional physical computer but runs on virtualized hardware, allowing users to deploy and manage applications without maintaining physical infrastructure
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+3.how do you you choose rigth instance type for your application???
+Choosing the right EC2 instance type for your application is critical for optimizing performance, cost, and scalability in AWS. Here’s a structured approach to selecting the best instance type:
+
+Step 1: Understand Your Workload Requirements
+Identify the primary resource needs of your application:
+
+1.CPU (Compute-Intensive):
+
+High-performance computing (HPC), batch processing, video encoding.
+
+2.Memory (RAM-Intensive):
+
+In-memory databases (Redis, SAP HANA), real-time analytics.
+
+
+3.Storage (I/O or Throughput-Intensive):
+
+Big data (Hadoop, Spark), data warehousing, high-speed logging.
+
+
+4.Networking (Low Latency/High Throughput):
+
+Gaming, VoIP, adtech, high-frequency trading.
+
+5.General-Purpose (Balanced CPU/Memory):
+
+Web servers, small databases, enterprise apps.
+
+
+6.GPU/ML Workloads:
+
+
+Deep learning, 3D rendering, scientific modeling.
+
+Step 2: Compare EC2 Instance Types
+AWS offers hundreds of instance types grouped into families. Key considerations:
+
+Step 3: Consider Performance vs. Cost
+On-Demand vs. Spot vs. Reserved Instances:
+---------------------------------------------------------------------------------------------------------------------------------------------
+4.What is an AMI (Amazon Machine Image)?
+An Amazon Machine Image (AMI) is a pre-configured template that contains the software configuration (operating system, applications, and settings) needed to launch an EC2 instance (virtual server) in AWS.
+ Think of it as a "blueprint" for your EC2 instances.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.how can you secure your ec2 instance
+
+Security Measure	       Action
+
+Restrict Network Access	        Use Security Groups & NACLs to allow only necessary traffic.
+SSH Key Authentication	        Disable password login, enforce key-based SSH.
+IAM Roles (Least Privilege)	Avoid hardcoding AWS credentials; assign minimal permissions.
+Automate Patching	        Use AWS Systems Manager or manual updates.
+Encrypt Data	   		Enable EBS encryption & HTTPS/TLS.
+Enable Logging			Use CloudWatch, GuardDuty, and VPC Flow Logs.
+IMDSv2 Protection		Disable IMDSv1 to prevent SSRF attacks.
+OS Hardening			Follow CIS benchmarks, disable unused services.
+Backups & DR			Schedule EBS snapshots and replicate across regions.
+DDoS Protection			Use AWS Shield + WAF for web-facing instances.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+6.explain the diffrence between security group and Network ACl
+
+
+Feature			Security Group (SG)			Network ACL (NACL)
+
+Scope			Instance-level				Subnet-level
+Stateful/Stateless 	Stateful (auto-allow replies)		Stateless (must define return traffic)
+Rule Types		Allow only				Allow + Deny
+Rule Order		No order (all evaluated)		Numbered priority (first match wins)
+Default Behavior	Deny inbound, allow outbound		Allow all (custom NACLs deny by default)
+Best For		Instance-specific rules			Subnet-wide filtering
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+7.what is elastic ip address
+ An Elastic IP (EIP) address is a static, public IPv4 address provided by AWS that you can allocate to your AWS account and associate with EC2 instances, NAT gateways, or other AWS resources.
+ Unlike a regular public IP (which changes when an instance stops/restarts), an Elastic IP remains persistent until you explicitly release it.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+8.how can you scale ec2 instances base on demand
+
+To scale EC2 instances dynamically, use AWS Auto Scaling with:
+
+Auto Scaling Groups (ASG) – Manages EC2 instance fleets.
+
+Scaling Policies – Define rules (e.g., CPU > 70% → add instances).
+
+Load Balancer (ALB/NLB) – Distributes traffic across instances.
+
+Launch Template – Specifies AMI, instance type, and configurations.
+
+Types of Scaling:
+
+Horizontal Scaling (Scale Out/In): Add/remove instances (best for stateless apps).
+
+Vertical Scaling (Scale Up/Down): Resize instances (requires restart).
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.what is ec2 instance metadata
+  EC2 Instance Metadata is a service that provides temporary, dynamic data about an EC2 instance (e.g., instance ID, public IP, security groups, IAM role credentials).
+ It’s accessible only from within the instance itself.    
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10.Can You Attach an EBS Volume to Multiple EC2 Instances Simultaneously?
+Short Answer:
+No, a standard EBS volume can only be attached to one EC2 instance at a time in the same AWS Region.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.diff between on demand ,reserve and spot instances
+
+  1. On-Demand Instances
+What? Pay-as-you-go, no commitment
+
+Price: Highest hourly rate
+
+Availability: Always available
+
+Best for:
+
+Short-term/unpredictable workloads
+
+Test environments
+
+First-time deployments
+
+Key Point: "Like a hotel room you rent nightly at full price"
+
+2. Reserved Instances (RIs)
+What? 1-3 year commitment
+
+Price: Up to 75% discount vs On-Demand
+
+Types:
+
+Standard (fixed capacity)
+
+Convertible (can change instance type)
+
+Best for:
+
+Steady-state production workloads
+
+Databases running 24/7
+
+Key Point: "Like buying a condo - cheaper long-term but inflexible"
+
+3. Spot Instances
+What? Bid for unused capacity
+
+Price: Up to 90% discount
+
+Availability: Can be terminated with 2-min warning
+
+Best for:
+
+Fault-tolerant workloads
+
+Batch processing
+
+CI/CD pipelines
+---------------------------------------------------------------------------------------------------------------------
+12.How to Move an EC2 Instance to AnothMethod 1: AMI Copy & Launch (Recommended)
+Create an AMI (Amazon Machine Image) of the instance
+
+Go to EC2 Dashboard → Instances → Select instance → Actions → Image → Create Image.
+
+Give it a name (e.g., my-instance-ami) and confirm.
+
+Copy the AMI to the target region
+
+Go to EC2 → AMIs → Select the AMI → Actions → Copy AMI.
+
+Choose the destination region (e.g., us-east-1 → eu-west-1).
+
+Launch a new instance from the copied AMI in the target region
+
+In the new region, go to EC2 → AMIs → Select the copied AMI → Launch Instance.
+
+Choose instance type, VPC, security groups, etc.
+
+Update networking (if needed)
+
+Assign a new Elastic IP (EIP) in the target region.
+
+Update DNS records (Route 53) if applicable.
+
+er AWS Region
+-------------------------------------------------------------------------------------------------------------------------------
+
+14.What is an Instance Profile in AWS?
+An Instance Profile is a container for an IAM role that allows an EC2 instance to securely access AWS services (e.g., S3, DynamoDB) without hardcoding credentials.
+ It enables temporary, least-privilege permissions via AWS Identity and Access Management (IAM).
+  ----------------------------------------------------------------------------------------------------------------------------------
+15.Can You Change the Instance Type of a Running EC2 Instance?
+Yes, but the instance must be stopped first. You cannot change the instance type while it's running.
+---------------------------------------------------------------------------------------------------------------------------------
+16 EBS Snapshot in AWS: Explained
+
+ An EBS (Elastic Block Store) Snapshot is a point-in-time backup of an EBS volume, stored incrementally in Amazon S3.
+ It captures the exact state of the volume at the moment the snapshot is taken, including all data, configurations, and metadata
+---------------------------------------------------------------------------------------------------------------------------------
+17.how can you ensure high availability for your ec2 instances
+1. Distribute Instances Across Multiple AZs
+2. Use Elastic Load Balancing (ELB)
+3. Implement Auto Recovery
+4. Use EBS-backed Instances with Multi-Attach (for Critical Workloads)
+5. Deploy Across Multiple Regions (Disaster Recovery)
+6. Database & Stateful Workload HA Strategies
+---------------------------------------------------------------------------------------------------------------------------------------
+18.diff bet instances store and ebs volume
+
+Instance Store (Ephemeral Storage)
+	Temporary storage – Data is lost if the instance stops, terminates, or fails.
+
+	High performance – Ideal for caching, scratch disks, or temporary processing (e.g., Hadoop, Redis).
+
+	No backups – Cannot take snapshots; data must be manually copied elsewhere.
+
+	Free – Included in the instance cost.
+
+	Best for: Stateless, fault-tolerant workloads needing extreme speed.
+
+EBS (Elastic Block Store)
+	Persistent storage – Data remains after instance stop/termination.
+
+	Durable & reliable – Replicated within an AZ; supports snapshots for backups.
+
+	Flexible & scalable – Can detach/attach to different instances; supports encryption (KMS).
+
+	Costs extra – Billed per GB/month + optional IOPS/throughput upgrades.
+
+Best for: Databases (RDS, MySQL), boot volumes, and long-term storage
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+19.what is the role of userdata property when launching ec2 instance
+  The UserData property in AWS EC2 allows you to pass initialization scripts to an instance at launch.
+ These scripts run once during the first boot, enabling automated configuration, software installation, and environment setup.
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+20.can you share ami with other aws accounts
+  Yes, you can share an AMI with other AWS accounts, allowing them to launch EC2 instances from your AMI. Here’s how to do it:
+  EC2 → AMIs → Select AMI → Actions → Modify Image Permissions → Add AWS Account ID.
+--------------------------------------------------------------------------------------------------------------------------------------------
+21.what is the default limit on number of instances you can launch in an aws region
+	by default aws has limit of 20 instances per region
+	we can also request aws support team to increase number of instances
+  
+Resource				Default Limit						Notes
+Running On-Demand Instances (all types)	5–20 vCPUs (varies by instance family)			New accounts start with lower limits (e.g., 5 for t3.micro, 1 for m5.large).
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+22.how can you access your linux base ec2 instance if you loose the private key
+ Method 1: Replace the Key Pair (Stop/Start Instance)
+        Stop the Instance (EC2 → Instances → Select instance → Instance State → Stop).
+
+	Detach the Root Volume (EC2 → Volumes → Find the attached volume → Actions → Detach Volume).
+
+	Launch a Temporary Instance (in the same AZ) with a known key pair.
+
+	Attach the Old Volume to the temporary instance as a secondary volume (/dev/sdf).
+
+	Mount the Volume & Replace authorized_keys:
+
+
+	Reattach the Volume to the original instance and start it.
+
+	SSH Using the New Key:
+
+ Method 2: User Data Script (For Auto-Recovery)
+	Stop the Instance (must be EBS-backed).
+
+	Modify User Data to add a new SSH key:
+
+	Start the Instance – The script runs on boot, adding your key.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+23.what is the use of amazon machine images for ec2 instances
+	An Amazon Machine Image (AMI) is a pre-configured template that contains the software, operating system, and configurations needed to launch an EC2 instance.
+	 Think of it as a "blueprint" for your virtual servers.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+24.explain the concept of ec2 instance root device and the block devices
+  The root devices is the main storage devices used by an instance to boot the operating system
+ Block devices are additional storage volume that can be attached to instances for storing data
+------------------------------------------------------------------------------------------------------------------------------
+25.How Amazon CloudWatch Helps Monitor EC2 Instances
+	Amazon CloudWatch provides real-time monitoring, logging, and alerting for EC2 instances, enabling performance tracking, troubleshooting, and automated responses.
+
+--------------------------------------------------------------------------------------------------------------------
+26.Can You Resize an EBS Volume Attached to a Running EC2 Instance?
+	Yes! You can resize an EBS volume without stopping the EC2 instance in most cases. Here’s how it works:
+	Steps to Resize an EBS Volume (Without Stopping the Instance)
+   1. Modify the EBS Volume Size
+    AWS Console:
+
+  Go to EC2 → Volumes → Select volume → Actions → Modify Volume → Adjust size/IOPS → Modify.
+------------------------------------------------------------------------------------------------------------------
+27.diff bet horizontal and vertical sacling
+  Horizontal Scaling ("Scale Out/In")
+    What? Add/remove instances to handle load.
+
+      Use Case: Stateless apps (web servers, microservices).
+
+      Pros: No downtime, high availability.
+
+      Cons: Needs load balancer, distributed design.
+
+Vertical Scaling ("Scale Up/Down")
+What? Upgrade/downgrade instance size (CPU/RAM).
+
+	Use Case: Monolithic apps (databases, legacy systems).
+
+	Pros: Simple, no architectural changes.
+
+	Cons: Requires restart (downtime), costly at scale.
+
+Best For:
+
+	Horizontal: Cloud-native apps (Auto Scaling + ELB).
+
+	Vertical: Databases (RDS, single-server apps).
+-----------------------------------------------------------------------------------------------
+28.how does the amazon cloudwatch autoscaling work
+	How It Works:
+
+		CloudWatch monitors metrics (CPU, memory, traffic).
+
+		Alarms trigger when thresholds are breached (e.g., CPU > 70%).
+
+		Auto Scaling Group (ASG) adds/removes EC2 instances based on policies.
+
+		Load Balancer distributes traffic to scaled instances.
+------------------------------------------------------------------------------------------------
+29.what is the significance of elastic network interface
+  What is an ENI?
+	A virtual network adapter for EC2 instances that enables advanced networking configurations.
+
+  Key Benefits
+	✅ Multiple IPs per Instance – Assign secondary private/public IPs (e.g., host multiple websites).
+	✅ High Availability – Detach/attach ENIs to other instances for fast failover.
+	✅ Granular Security – Apply different security groups per ENI (isolate traffic types).
+	✅ Hybrid Cloud Support – Connect to on-premises networks via VPN/Direct Connect.
+	✅ IP Persistence – Retain Elastic IPs (EIPs) even if instances are replaced.
+--------------------------------------------------------------------------------------------------
+30.How to Attach an IAM Role to an Existing EC2 Instance
+  You can attach an IAM role to a running or stopped EC2 instance using the AWS Console, CLI, or SDK. Here’s how:
+
+  Method 1: AWS Console (GUI)
+	Go to EC2 Dashboard → Instances → Select your instance.
+
+	Click Actions → Security → Modify IAM role.
+
+	Choose the IAM role from the dropdown → Update IAM role.
+---------------------------------------------------------------------------------------------------

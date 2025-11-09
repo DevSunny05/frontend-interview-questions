@@ -1,0 +1,293 @@
+1.what is load balancing in aws
+  Load Balancing in AWS distributes incoming traffic across multiple EC2 instances, containers, or IP addresses to ensure high availability, fault tolerance, and scalability
+ for applications.
+
+
+	ALB for HTTP/HTTPS apps.
+
+	NLB for high-performance TCP/UDP workloads.
+
+	Classic only for legacy systems (avoid for new setups).
+------------------------------------------------------------------------------------------------------------------------------------
+2.what is auto scaling in aws
+  Auto Scaling in AWS is a service that automatically adjusts the number of EC2 instances in your application to maintain performance while optimizing costs.
+	Key Features:
+
+	Dynamic Scaling: Adds/removes instances based on demand
+
+	Health Checks: Replaces unhealthy instances
+
+	Multiple Policy Types:Target Tracking (maintain metrics like CPU at 60%)
+
+	  Step Scaling (add/remove instances in steps)
+
+	  Scheduled Scaling (predictable traffic patterns)
+-----------------------------------------------------------------------------------------------------
+3.what are the diff types of load balancer in aws  
+	AWS offers three main types of load balancers, each designed for specific use cases and operating at different layers of the OSI model:
+	
+  1. Application Load Balancer (ALB)
+		Layer: 7 (Application Layer - HTTP/HTTPS)
+		Best For: Web applications, microservices, and container-based architectures.
+
+Key Features:
+✅ Path-Based Routing – Directs traffic based on URL paths (e.g., /api → backend servers).
+✅ Host-Based Routing – Routes traffic by domain name (e.g., app.example.com vs. api.example.com).
+✅ Supports HTTP/2, WebSockets, and gRPC – Modern protocol support.
+✅ Server Name Indication (SNI) – Hosts multiple TLS-secured domains.
+✅ Integration with AWS WAF – Protects against web attacks.
+
+Use Cases:
+
+Modern web apps (React, Angular, etc.).
+
+Microservices (EKS, ECS, Lambda).
+
+A/B testing (weighted routing).
+
+  2. Network Load Balancer (NLB)
+Layer: 4 (Transport Layer - TCP/UDP)
+Best For: High-performance, low-latency applications.
+
+Key Features:
+⚡ Ultra-High Performance – Handles millions of requests/sec.
+🔌 Static IP & Elastic IP Support – Predictable IP addresses.
+📡 Preserves Source IP – Useful for firewalls and auditing.
+⚙ Supports TLS Termination – Offloads SSL decryption.
+
+Use Cases:
+
+Gaming servers (UDP traffic).
+
+IoT applications.
+
+VPNs and financial trading systems.
+
+  3. Gateway Load Balancer (GWLB)
+Layer: 3 (Network Layer - IP packets)
+Best For: Third-party virtual appliances (firewalls, intrusion detection).
+
+Key Features:
+🛡️ Transparent Traffic Inspection – Routes traffic to security appliances (e.g., Check Point, Fortinet).
+🔗 GENEVE Protocol Support – Encapsulates traffic for virtual appliances.
+🌐 Scales with Traffic – Automatically adjusts to load.
+
+Use Cases:
+
+Next-gen firewalls (Palo Alto, Cisco).
+
+Deep packet inspection.
+
+Compliance monitoring.
+-----------------------------------------------------------------------------------
+4 can you load balance web socket in aws
+  Yes! AWS supports WebSocket load balancing using Application Load Balancer (ALB) and Network Load Balancer (NLB), depending on your use case.
+----------------------------------------------------------------------------------------------------
+5.diff between ingrees and load balancer
+  Manages external access to Kubernetes services (HTTP/HTTPS).Layer 7 (HTTP/HTTPS)
+  Distributes traffic across EC2 instances, containers, or IPs.ALB (L7), NLB (L4)
+----------------------------------------------------------------------------------------
+6.whats the diff between active and passive health checks
+   1. Active Health Checks (Proactive Monitoring)
+Definition
+Active health checks involve the load balancer periodically sending test requests to backend instances to verify their health status.
+
+How It Works
+The load balancer sends probes (HTTP/HTTPS/TCP requests) at configured intervals.
+
+Instances must respond within a timeout period (e.g., 200 OK for HTTP).
+
+If an instance fails multiple consecutive checks, it's marked unhealthy.
+  
+  2. Passive Health Checks (Reactive Monitoring)
+Definition
+Passive health checks analyze real user traffic to detect failures, without sending separate probes.
+
+How It Works
+Monitors actual requests/responses:
+
+HTTP 5xx errors
+
+TCP connection failures
+
+Timeouts
+
+If an instance shows consistent failures, it's marked unhealthy
+----------------------------------------------------------------------------------------------
+7.what happen if your load balancer fail how to manage this condition
+
+   Always deploy LBs across multiple AZs
+
+   Implement cross-region failover for critical applications
+
+   Monitor both LB health and backend instances
+
+   Automate failover procedures
+
+   Test failure scenarios regularly (Chaos Engineering)
+-----------------------------------------------------------------------------------------
+8.what is diff bet geo load server balancing and global server load balancing
+
+   Geo Load Balancing
+	What? Routes traffic based on user geographic location.
+
+	Use Case: Localized content, compliance (e.g., GDPR).
+	
+	How? Uses DNS (e.g., AWS Route 53 Geoproximity Routing).
+
+	Limitation: Slower failover (DNS-dependent).
+
+  Global Server Load Balancing (GSLB)
+	What? Smart traffic distribution worldwide based on health, latency, and policies.
+
+	Use Case: Mission-critical apps needing low latency and instant failover.
+
+	How? Uses anycast IPs (e.g., AWS Global Accelerator).
+
+	Advantage: Faster failover, supports all protocols (TCP/UDP/HTTP
+----------------------------------------------------------------------------------------------
+9.what are the key scaling options available in aws auto scaling
+
+
+1.Dynamic Scaling
+
+	Target Tracking: Maintains metrics (e.g., 60% CPU).
+
+	Step Scaling: Adds/removes instances in steps.
+
+	Simple Scaling: Basic fixed adjustments (legacy).
+
+2.Scheduled Scaling
+
+	Scales at fixed times (e.g., business hours).
+
+3.Predictive Scaling
+
+	Uses ML to forecast demand and scale proactively.
+
+4.Manual Scaling
+
+	Manually adjust capacity (for testing/overrides).
+
+5.Health-Based Scaling
+
+	Automatically replaces unhealthy instances.
+
+6.Mixed Instances
+
+	Combines On-Demand + Spot Instances for cost savings.
+-------------------------------------------------------------------------------------------------
+10.how does the application load balancer differ from network load balancer
+
+  Application Load Balancer (ALB)
+
+Operates at Layer 7 (HTTP/HTTPS)
+
+Best for: Web apps, APIs, microservices
+
+Key Features:
+✅ Path/host-based routing
+✅ Supports HTTP/2, WebSockets
+✅ Integrated with WAF
+❌ No static IP (DNS only)
+
+Network Load Balancer (NLB)
+
+Operates at Layer 4 (TCP/UDP)
+
+Best for: High-performance, low-latency apps
+
+Key Features:
+✅ Static IP/Elastic IP support
+✅ Handles millions of requests/sec
+✅ Preserves source IP
+❌ No HTTP awareness
+
+When to Choose:
+
+Use ALB for web applications needing advanced HTTP routing
+
+Use NLB for gaming, IoT, or when static IPs are required
+-----------------------------------------------------------------------------------------------
+11.how can you achieve cross zone load balancing with elastic load balancer
+   Application Load Balancer (ALB)
+
+✅ Always enabled (cannot be disabled)
+
+No configuration needed
+
+Network Load Balancer (NLB)
+
+❌ Disabled by default
+----------------------------------------------------------------------------------------
+12.what is the purpose of target group in alb
+  What is a Target Group?
+A logical grouping of backend resources (EC2, Lambda, IPs) that receive traffic from an Application Load Balancer (ALB).
+
+Key Purposes
+Backend Routing
+
+Directs traffic to specific resources (e.g., /api → EC2, /images → Lambda).
+
+Health Monitoring
+
+Regularly checks instance health (e.g., HTTP GET /health).
+
+Automatically removes unhealthy targets.
+
+Traffic Management
+
+Enables sticky sessions (session affinity).
+
+Supports multiple protocols (HTTP, HTTPS, gRPC, WebSocket).
+------------------------------------------------------------------------------------------
+13.how can you ensure that your alb automatically scale base on traffic demand
+  1. Set Up Auto Scaling with ALB
+Prerequisites
+An ALB with a target group (registered with EC2 instances).
+
+A launch template (defines EC2 instance configuration).
+	min-size: Minimum instances (e.g., 2 for high availability).
+
+	max-size: Maximum instances (e.g., 10 to limit costs).
+
+	target-group-arns: Links ASG to ALB’s target group.
+ B. Configure Scaling Policies
+Use target tracking to scale based on demand:
+Adjust TargetValue (e.g., 60 = scale when CPU hits 60%).
+
+--------------------------------------------------------------------------------
+14.what is the purpose of a listeners in elastic load balancer
+  A listener in AWS Elastic Load Balancer (ALB, NLB, or CLB) defines how traffic is routed to backend targets.
+ It acts as a traffic director by checking for connection requests from clients and forwarding them based on configured rules.
+
+---------------------------------------------------------------------------------------
+15.what is the purpose of a listeners in elastic load balancer
+  A Target Group is a logical grouping of backend resources (like EC2 instances, Lambda functions, or IP addresses) that receive traffic from an ALB.
+ It acts as the final destination for requests routed by the ALB’s rules.
+----------------------------------------------------------------------------------------
+16.explain the concept of sticky sessions in elb
+  Sticky sessions ensure that requests from the same user are consistently routed to the same backend instance during a session.
+ This is critical for stateful applications where user data is stored locally (e.g., shopping carts, user logins).
+-------------------------------------------------------------------------------------------
+17.how do you configure health checks for targets in an elastic load balancer
+
+  1. Purpose
+Health checks ensure your load balancer:
+✅ Routes traffic only to healthy targets
+✅ Automatically replaces unhealthy instances
+✅ Maintains application availability
+
+2. Key Configuration
+Protocol: HTTP (recommended), HTTPS, or TCP
+
+Path: /health (customizable endpoint)
+
+Interval: 30 seconds (default)
+
+Thresholds:
+
+2-3 successes → Healthy
+
+2-3 failures → Unhealthy
+------------------------------------------------------------------------

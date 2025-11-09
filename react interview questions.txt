@@ -18,7 +18,7 @@ React interview Question
 16.how we update state
 17.can browser is able to read jsx
 18.why you are using react tha angular(Difference)
-19.what is higher order component in react
+19.what is higher order component in react  
 20.can we reuse functional component
 21.diff between class and function component
 22.what are the types of hooks
@@ -76,7 +76,15 @@ React interview Question
 74.diff between saga and thunk
 76.explain flow of redux saga
 77.which algorithem react uses
-78.what is latest feature of react                         
+78.what is latest feature of react 
+79.what is dynamic routing
+80.useParam hook         
+81.dif bet normal dependency and dev dependency
+82.default export and named export
+83what are intercepter(middlewares)   
+84.exaple of impure function
+85.what is code splitting
+86.optional chaining(?.) and nullish coelsing(??)            
 
 
 Javascript interview question
@@ -92,7 +100,7 @@ Javascript interview question
 10.diff between for in and for of
 11.whai is higher order component
 12.diff between session storage and local storage           
-13.what is diff between async and script defer
+13.what is diff between async and script defer   
 14.new feature introduce in es6
 15.diff bet map and for each
 16.what is push and replace
@@ -128,6 +136,18 @@ Javascript interview question
 47.What are some of the new features introduced in ES6 (ECMAScript 2015)                             
 48.How can you optimize the performance of JavaScript code?
 49.what is latest feature of javascript
+50.diff between find() and findIndexof() method
+51.what is Event deligation?
+	Instead of adding event listeners to every child element,
+	you add one listener to a common parent — and handle events for all children inside that single listener.
+52.function decleration and function expression
+53.Different ways to create or construct an object
+54.pollyfills
+55.difference between Map and WeakMap in JavaScript
+56.what is the use of new keyword.
+57.What is a Generator Function?
+58.what is stop propogation
+
 
 50.how to sort number array
 51.how to sort string array
@@ -155,7 +175,7 @@ Javascript interview question
 83.how can we replace an element at specific index of an array
 84.how can we insert an element at specific index of an array
 85.how can we deletean element at specific index of an array
-86.how can we deletean specific element of an array
+86.how can we delete a specific element of an array
 87.how can we clone object
 88.how to add array at beggining of array
 89.how to remove ele at the end of array
@@ -164,6 +184,13 @@ Javascript interview question
 92.how can you add an element to the obj
 93.how to remove ele at beginning of array
 94.how can you combine two obj
+95.diff beetween undefine and null
+96.what is promise.all()
+97.What is Promise.allSettled()?
+98.What is Promise.any()?
+99.how do you turn an object into an array
+100.diff bet find() and every() method
+101.implement debounce
 
 
 
@@ -178,7 +205,50 @@ HTML interview question
 6.what is diff between script async and script differ
 7.what is the use of doctype
 8.Can you explain the use of alt tags for images?
-9.
+9.Can you explain the difference between HTML and XHTML?
+10.What is the purpose of the "data" attribute in HTML5?
+11.What is the role of the "meta" tag in HTML?
+12.Can you explain the difference between the "alt" and "title" attributes in HTML?
+13.How do you implement responsive design in HTML?
+14.What is the role of the "header" and "footer" tags in HTML5?
+15.How do you create a form in HTML?
+16How do you create a hyperlink in HTML?
+17.Can you explain the difference between the "src" and "href" attributes in HTML?
+18.How do you create a table in HTML?
+19.Can you explain the difference between the "class" and "id" attributes in HTML?
+20.How do you create a form in HTML?
+21.Can you explain the difference between the "input" and "textarea" tags in HTML?
+22.How do you embed an audio file in HTML?
+23.Can you explain the difference between the "em" and "strong" tags in HTML?
+24. Can you explain the difference between the "article" and "section" tags in HTML5?
+25.How do you embed a YouTube video in HTML?
+26.Can you explain the difference between the "button" and "input" tags in HTML?
+27.How do you create a dropdown menu in HTML?
+28. Can you explain the difference between the "ol" and "ul" tags in HTML?
+29.How do you create a canvas element in HTML5?
+30.Can you explain the difference between the "cite" and "q" tags in HTML?
+31.How do you create an image map in HTML?
+32.Can you explain the difference between the "span" and "div" tags in HTML?
+33.How do you create a tooltip in HTML?
+34.Can you explain the difference between the "datalist" and "select" tags in HTML?
+35.Can you explain the difference between the "optgroup" and "option" tags in HTML?
+36.Can you explain the difference between the "pre" and "code" tags in HTML?
+37.Can you explain the difference between the "progress" and "meter" tags in HTML5?
+38.Can you explain the difference between the "ruby" and "rt" tags in HTML5?
+39.Can you explain the difference between the "section" and "article" tags in HTML5?
+40.How do you create a table with fixed headers and a scrolling body in HTML?
+41.The "time" input type is used to allow users to select a specific time value, while the "date" input type is used to allow users to select a specific date value.
+42.Can you explain the difference between the "nav" and "aside" tags in HTML5?
+43.diff bet link  and anchor tag
+44.what are empty elements
+45.What is HTML entities
+46.diff bet div and span thag
+47.the difference between <em> and <i> in HTML.
+49what an Image Map is, why it’s used, and how to create one
+50.what is class and id
+51.what is the use of require attribute
+52.diff between image and figure tag
+53.what is microstorage in html
 
 
 CSS interview question
@@ -203,3 +273,9 @@ CSS interview question
 18.Can you explain the CSS z-index property and its uses?
 19.How would you create an ordered or unordered list in HTML?
 20.Can you explain the use of HTML meta tags?
+21.cell padding cell spacing
+22.what are the diff type of css
+23.what are sudo classes in css
+24.how to give shadow effect to the text
+
+187924/287=x-1876=y/2

@@ -1,0 +1,158 @@
+1.What is the difference between padding and margin?
+	Padding is the space between an element’s content and its border. Margin is the space between an element’s border and the next element on the page.
+
+2.How do you center an element horizontally and vertically?
+	To center an element horizontally, you can set the left and right margins to auto and set the width of the element. To center an element vertically, you can set the top and bottom margins to auto and set the height of the element
+
+3.How do you make a div element disappear when clicked?
+	: You can use the :active pseudo-class to make a div element disappear when clicked. For example, you can set the opacity of the div to 0 and add the :active pseudo-class to the div’s CSS selector.
+
+4.What is the box-sizing property and how does it work?
+	 The box-sizing property allows you to define how an element’s width and height are calculated. The default value is content-box, which means that the width and height of an element do not include padding or border. If you set the value to border-box, the width and height of an element include padding and border
+
+5.How do you create a sticky footer?
+	To create a sticky footer, you can use the flexbox layout. Set the body element to display: flex, and set the flex-direction to column. Set the min-height of the body to 100vh, and set the margin-top property of the main content to auto. This will push the footer to the bottom of the page.
+
+6.How do you create a responsive grid system using CSS?
+	 You can use CSS Grid or Flexbox to create a responsive grid system. With CSS Grid, you can define a grid template with the grid-template-columns and grid-template-rows properties.
+ With Flexbox, you can use the flex property to specify how the elements should grow or shrink.
+
+7.How do you create a dropdown menu in CSS?
+	You can create a dropdown menu in CSS by using the :hover pseudo-class. For example, you can add a sub-menu to a main menu item and set the display property of the sub-menu to none. Then, when the main menu item is hovered over, you can set the display property of the sub-menu to block.
+
+8.What is the difference between the display: none and visibility: hidden properties?
+	The display: none property hides an element and removes it from the layout of the page, while the visibility: hidden property hides an element but still takes up space in the layout.
+
+9.How do you make a div element fixed to the bottom of the screen?
+	You can make a div element fixed to the bottom of the screen by setting the position property to fixed and the bottom property to 0.
+
+10.How do you create an animated button using CSS?
+	You can create an animated button using CSS by using keyframe animations. For example, you can create an animation that changes the background color and border-radius properties of a button when it is hovered over.
+
+11.How do you create a gradient background in CSS?
+	You can create a gradient background in CSS using the linear-gradient function. For example, you can set the background property of an element to a gradient that fades from one color to another.
+
+12.How to create a responsive table in CSS?
+	 To create a responsive table in CSS, you can use the following steps:
+
+Wrap the table in a container div with a class name.
+
+Add the following CSS code to the container div:
+
+.container {
+
+overflow-x: auto;
+
+}
+
+This will create a horizontal scroll bar when the table width exceeds the container width.
+
+13.How do you make a div center align in CSS?
+	To make a div center align in CSS, you can use the following code:
+
+div {
+
+position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+}
+
+14.How do you create a sticky header in CSS?
+	To create a sticky header in CSS, you can use the following code:
+
+header {
+
+position: sticky;
+
+top: 0;
+}
+
+15. How do you create a drop cap in CSS?
+	 To create a drop cap in CSS, you can use the following code:
+
+p::first-letter {
+
+font-size: 4em;
+
+float: left;
+
+margin-right: 10px;
+
+font-weight: bold;
+
+}
+
+16.Explain the CSS specificity hierarchy and how it works?
+	CSS specificity is the process of determining which styles will be applied to an element when multiple styles have been defined. The hierarchy of CSS specificity is as follows:
+
+ID selectors have the highest specificity.
+Class selectors and attribute selectors have medium specificity.
+Type selectors have the lowest specificity.
+Inline styles always override any other styles.
+When multiple selectors are targeting the same element, the selector with the highest specificity will be applied. If two selectors have the same specificity, the last one in the stylesheet will be applied.
+
+
+17. Explain the difference between relative and absolute positioning in CSS.
+
+	Relative positioning is a type of positioning where an element is positioned relative to its normal position.
+ This means that it can be moved around without affecting the positions of other elements on the page.
+ The position property with a value of relative is used for this type of positioning.
+
+	Absolute positioning, on the other hand, is a type of positioning where an element is positioned relative to its nearest positioned ancestor.
+ If there is no positioned ancestor, it is positioned relative to the document.
+ This type of positioning can be used to create overlays and other effects. 
+The position property with a value of absolute is used for this type of positioning.
+
+18.What is the purpose of the z-index property in CSS?
+	The z-index property is used to control the vertical stacking order of elements that overlap.
+ Elements with a higher z-index value are stacked on top of elements with a lower z-index value.
+ The z-index property only works on positioned elements, so you need to set the position property to relative, absolute, or fixed to use it.
+
+19.Explain the difference between the display property values of block, inline, and inline-block.
+	Block: A block-level element takes up the full width of its parent container and creates a new line after it. Examples of block-level elements include <div>, <p>, and <h1> - <h6>.
+Inline: An inline-level element does not create a new line and only takes up as much width as its content. Examples of inline-level elements include <span>, <a>, and <img>.
+Inline-block: An inline-block element behaves like an inline-level element, but it can have a width and height specified, as well as margins and padding. Examples of inline-block elements include <button> and <input>.
+
+
+20.When should you use translate () instead of absolute positioning?
+	Translate is a CSS transform value. On changing opacity or transform, browser reflow or repaint is not triggered.
+ Transform requires the browser to create a GPU layer for elements but using the CPU changes absolutes positioning properties.
+ Translate () is more efficient and results in shorter paint times.
+ On using translate (), element occupies original space, unlike in changing absolute positioning. 
+
+
+21.Name different ways to position some aspects in CSS. 
+	The positioning property specifies the positioning method type. The five different position values are fixed, static, absolute, sticky, and relative.
+ The elements are positioned using top, left, right, and bottom properties. These properties need to be set first, and they work depending on position value. 
+
+22.What are mixins?
+	A mixin is similar to a function block of code returning a single value—mixin output lines of Sass code that directly compiles into CSS styles.
+ At the same time, the function returns a value that becomes the value for a CSS property or something that can be passed to another mixin.
+
+23.What do you understand by pseudo-elements?
+	Pseudo-elements provide special effects to some selectors. CSS finds use in applying styles in HTML markups.
+ If additional markup or style is not feasible for a document, the pseudo-elements help by allowing extra markup without interfering with the original document.
+
+24.What do you understand by pseudo-elements?
+	Pseudo-elements provide special effects to some selectors. CSS finds use in applying styles in HTML markups.
+ If additional markup or style is not feasible for a document, the pseudo-elements help by allowing extra markup without interfering with the original document.
+
+25.Differentiate between logical and physical tags
+	Logical tags mainly focus on content and are older as compared to physical ones. Logical ones do not find much usage in presentation and terms of aesthetics.
+ At the same time, physical ones find application in presentation.
+
+26.What is Tweening?
+	Tweening is the process by which intermediate frames between two pictures are created in order to find the appearance of the first image developing into the secon
+
+27.What is the universal selector?
+	This is a selector which can match the name of any element type, rather than selecting the elements of a specific category.
+
+
+
+
+

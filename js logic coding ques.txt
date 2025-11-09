@@ -1,8 +1,22 @@
 1.console.log([] == []);
 console.log([] == "");
 
+[] == ""	[].toString() → ""	✅ true
+[] == 0	[].toString() → "", then "" → 0	✅ true
+"" == 0	"" → 0	✅ true
+[] == ![]	![] → false → 0, [] → "" → 0	✅ true 😅
+
+//////////When an array is compared using == to a non-object (like a string or number),
+JavaScript converts the array to a primitive value — using toString().
+
+[].toString() → ""
+
+
+
 2.let n = 10; // Declare a variable n and assign it the value 10
 console.log(n.toString(8));
+
+////////This converts the number n into a string, using base 8 (octal) representation.
 
 3.function a() {
   console.log("hiii"); // This line logs "hiii" to the console
@@ -74,7 +88,7 @@ console.log(Number(""));
 abc(2.8);
 
 
-17.const arr = [1, 300, 500, 1, 10];
+17.const arr = [1, 300, 500, 100, 10];
 arr.sort();
 console.log(arr);
 
@@ -164,7 +178,7 @@ console.log(str)
 39.diff bet asyn await and promice
 
 40.event deligation
-
+-----------------------------------------------------------
 41.
 var arr1=["boy","oy"]
 var arr2=["ram","am"]
@@ -180,12 +194,11 @@ function check(arr){
    }else{
        return false
    }
-}
-
+}--------------------------------------------------------
 42.diff status codes
-
+--------------------------------------------
 43.how js work in browser
-
+---------------------------------------------------------------------
 44. const arr=[45,44,96,47,65,48]
 
 
@@ -208,7 +221,7 @@ function bubbleSort(arr1){
 }
 
 console.log(bubbleSort(arr))
-
+-----------------------------------------------------------------------------
 45.how to find duplicate elements in array
 
 const arr=[1,2,2,3,4,4,5,6,6]
@@ -231,7 +244,7 @@ function checkDuplicate(arr){
 }
 
 console.log(checkDuplicate(arr))
-
+-----------------------------------------------------------
 46.make first char of string array into uppercase
 
 const arr=["jan","feb","mar","apr"]
@@ -239,10 +252,11 @@ const arr=["jan","feb","mar","apr"]
 const updatesArr=arr.map((ele)=>ele.charAt(0).toUpperCase()+ele.slice(1))
 
 console.log(updatesArr)
-
+-------------------------------------------------------------
 47.min number in array
 
 const arr=[25,4,8,9,10,8,2]
+
 
 
 
@@ -260,6 +274,13 @@ function findMin(arr){
 
 console.log(findMin(arr))
 
+or
+
+ let arr=[10,8,9,3,5,7,55,78,24]
+
+const res=arr.reduce((acc,ele)=>ele<acc?ele:acc,arr[0])
+console.log(res)
+------------------------------------------------------------------
 48.how to check if given array contain element of another array
 
 const arr1=[25,4,8,9,10,8,2]
@@ -269,7 +290,7 @@ const arr2=[12,45,89,65,2]
 const contaArr=arr1.map((ele)=>arr2.includes(ele))
 
 console.log(contaArr)
-
+-------------------------------------------------------
 49.given two string heck if they are anagram for each other
 
 const str1="ram"
@@ -284,3 +305,375 @@ function anargum(str1,str2){
 50.
 
 console.log(anargum(str1,str2))
+----------------------------------------------------------------
+
+51.
+console.log(null===undefined)
+console.log(null==undefined)
+
+ans:
+Why null == undefined is true?
+
+In loose equality (==), JavaScript has special rules called Abstract Equality Comparison.
+
+The rule says:
+
+If one value is null and the other is undefined, return true.
+---------------------------------------------------------------------
+52.
+return single ,double and triple digit array from sinle arry
+let arr=[1,10,100,2,20,200]
+
+let oneDigit=[]
+let twoDigit=[]
+let threeDigit=[]
+
+for(let item of arr){
+    if(item<10){
+        oneDigit.push(item)
+    }else if(item<100){
+        twoDigit.push(item)
+    }else{
+        threeDigit.push(item)
+    }
+}
+
+console.log(oneDigit)
+console.log(twoDigit)
+console.log(threeDigit)
+--------------------------------------------------------
+53.
+swap two number without using third one
+let a=5,
+b=10
+
+[a,b]=[b,a]
+-------------------------------------------------------------------------
+
+54.
+return two seperate arry of number and string	
+
+let arr=[1,'a',2,3,'b','c','d']
+let num=[]
+let str=[]
+
+for(let ele of arr){
+    if(typeof ele=='number'){                  //Number.isInteger(ele)
+        num.push(ele)
+    }else{
+        str.push(ele)
+    }
+}
+
+console.log(num)
+console.log(str)
+-----------------------------------------------------
+55.
+
+what is promise.all()
+
+Promise.all([promise1, promise2, promise3])
+  .then(values => {
+    // runs when all promises resolve
+  })
+  .catch(error => {
+    // runs if any promise rejects
+  });
+--------------------------------------------------
+56.What is Promise.allSettled()?
+
+const p1 = Promise.resolve("✅ Success 1");
+const p2 = Promise.reject("❌ Error 2");
+const p3 = Promise.resolve("✅ Success 3");
+
+Promise.allSettled([p1, p2, p3])
+  .then(results => console.log(results));
+✅ Output:
+js
+Copy code
+[
+  { status: "fulfilled", value: "✅ Success 1" },
+  { status: "rejected", reason: "❌ Error 2" },
+  { status: "fulfilled", value: "✅ Success 3" }
+]
+--------------------------------------------------
+57.What is Promise.any()?
+
+Promise.any() takes an array (or iterable) of promises and returns a single promise that:
+
+✅ Resolves → as soon as any one promise in the array fulfills (succeeds).
+❌ Rejects → only if all promises reject.
+
+const p1 = Promise.reject("❌ Failed 1");
+const p2 = Promise.resolve("✅ Success 2");
+const p3 = Promise.resolve("✅ Success 3");
+
+Promise.any([p1, p2, p3])
+  .then(result => console.log("Result:", result))
+  .catch(err => console.log("Error:", err));
+✅ Output:
+
+makefile
+Copy code
+Result: ✅ Success 2
+
+
+--------------------------------------------
+58.how do you turn an object into an array
+
+const user = { name: "Sarang", age: 25, country: "India" };
+
+const entries = Object.entries(user);
+console.log(entries);
+/*
+👉 [
+  ["name", "Sarang"],
+  ["age", 25],
+  ["country", "India"]	
+
+--------------------------------------------------------
+59.		
+
+if([]==true){
+    console.log("sarang")
+}else{
+    console.log("No one is present")
+}
+
+-------------------------------------------------------
+
+60
+function print(b,...a){
+    console.log(a)
+}
+
+print(8,9,10,11,12)
+---------------------------------------------------------
+61
+```
+In JavaScript, object keys must be strings or symbols.
+You cannot use another object as a direct key.
+
+When you try to use an object as a key (like obj1[obj2]),
+JavaScript automatically converts the object to a string.
+
+```
+
+const obj1={}
+
+const obj2={name:"sarang patil"}
+
+const obj3={name:"Mayur patil"}
+
+obj1[obj2]={name:"Ram patil"}
+
+obj1[obj3]={name:"Sham patil"}
+
+console.log(obj1[obj2])
+
+------------------------------------------------------------------
+
+62.
+console.log([]===[])
+console.log([]==[])
+
+--------------------------------------------------------------------
+63.
+let x=10
+
+if(function solve(){}){
+    x=x-typeof(solve)
+    
+}
+console.log(x)  //NaN
+
+
+let x=10
+
+if(function solve(){}){
+    x=x+typeof(solve)
+
+}
+console.log(x)   //10undefined
+-------------------------------------------------------------------------
+64,intersection in two array
+
+let a1=[1,2,3,4,5,9]
+let a2=[4,5,6,7,8,9]
+
+const res=a1.filter((ele)=>a2.includes(ele))
+console.log(res)
+
+-----------------------------------------------------------------------------
+
+65.
+console.log("100"-"8"-20)
+---------------------------------------------------------------------------
+66.
+let obj={
+    abc:"sarang",
+    pqr:function (){
+        console.log(this.abc)
+    }
+}
+
+const c=obj.pqr
+c()
+obj.pqr()
+
+------------------------------------------------------------
+67.write fibonacci func
+
+function fibonaci(n){
+    let series=[0,1]
+
+    for(let i=2;i<n;i++){
+        series[i]=series[i-1]+series[i-2]
+    }
+
+    return series
+}
+
+console.log(fibonaci(10))
+
+----------------------------------------------------------
+68.flattern all the array
+let arr=[[0,1],['sarang',"patil"],[3,4]]
+
+function flatArray(arr){
+    let flat=[]
+    for(let i=0;i<arr.length;i++){
+        flat.push(...arr[i])
+    }
+    console.log(flat)
+}
+flatArray(arr)
+------------------------------------------------------------------------------
+69.
+const abc=()=>{
+    console.log(this.name)
+}
+abc.call({name:"sarang"})
+
+
+const abc=function(){
+    console.log(this.name)
+}
+abc.call({name:"sarang"})
+
+---------------------------------------------------------------
+70.two sum array
+
+let arr=[8,1,5,4,6,11]
+
+function sumOf(arr,target){
+    let ans=new Array(-1,-1)
+
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[i]+arr[j]==target){
+                ans[0]=i
+                ans[1]=j
+                return ans
+            }
+        }
+    }
+
+    return ans
+}
+const res=sumOf(arr,10)
+console.log(res[0],res[1])
+-------------------------------------------------------------------------
+71.concatinate two string alternatively
+
+let str2="sarang"
+let str1="patil"
+
+let str=""
+let m=str1.length
+let n=str2.length
+
+let i=0 
+let j=0
+
+while(i<m && j<n){
+    str+=str1[i]
+    str+=str2[j]
+
+    i++
+    j++
+}
+
+
+if(i==m){
+    while(j<n){
+        str+=str2[j]
+        j++
+    }
+}
+
+if(j==n){
+    while(i<m){
+        str+=str1[i]
+        i++
+    }
+}
+
+console.log(str)
+
+
+-----------------------------------------------------------------------------------
+72.console.log({}=={})
+console.log({}==={})
+-----------------------------------------------------------------------------------
+78.
+var a=500
+{
+    var a=1000
+}
+let b=a
+
+{
+    let b=1500
+}
+
+console.log(b)
+
+
+----------------------------------------------------------------------------------
+79.
+let str="SarangPatil"
+// let result=str.slice(0,6)+" "+str.slice(6)
+let result=str.replace(/([A-Z])/g, ` $1`).trim()
+console.log(result)  //Sarang Patil
+
+----------------------------------------------------------------------------------
+
+80.find duplicate element in array using filter
+const arr = [1, 2, 3, 4, 2, 3, 5, 1];
+
+const duplicates = arr.filter((item, index) => arr.indexOf(item) !== index);
+
+console.log(duplicates);
+
+const uniqueDuplicates = [...new Set(duplicates)]; // [2, 3, 1]
+-------------------------------------------------------------------------------
+81
+console.log("2"-"2")
+console.log(2-"2")
+console.log("2"-2)
+-----------------------------------------------------------
+82.
+let obj={
+    a:{
+        b:undefined
+    }
+}
+
+console.log(obj.a?.b?.c?.d??"sarang")
+----------------------------------------------------------------
+83. special case
+console.log(null==undefined)  //true
+console.log(null===undefined)  //false
+
+----------------------------------------------------------

@@ -1,0 +1,319 @@
+1.what is aws s3
+
+  AWS S3 (Amazon Simple Storage Service) is a scalable, high-speed, web-based cloud storage service
+ designed for online backup and archiving of data and applications on Amazon Web Services (AWS).
+ It provides object storage through a simple web interface and is designed to deliver 99.999999999% (11 nines) durability and high availability.
+-------------------------------------------------------------------------------------------------------
+2.keys feature of s3
+ 
+Key Features of AWS S3:
+1.Object Storage
+
+	Stores data as objects (files) within buckets (containers).
+
+	Each object includes the data, metadata, and a unique identifier (key).
+
+2.Scalability & Durability
+
+	Automatically scales to handle any amount of data.
+
+	Replicates data across multiple Availability Zones (AZs) for fault tolerance.
+
+3.Security & Compliance
+
+	Supports encryption (SSE-S3, SSE-KMS, SSE-C, client-side).
+
+	Fine-grained access control via IAM policies, bucket policies, and ACLs.
+
+	Compliance certifications (HIPAA, GDPR, SOC, etc.).
+
+4.Storage Classes (Cost Optimization)
+
+	S3 Standard (frequent access, low latency).
+
+	S3 Intelligent-Tiering (auto-optimizes costs based on usage).
+
+	S3 Standard-IA / One Zone-IA (infrequent access, lower cost).
+
+	S3 Glacier & Glacier Deep Archive (long-term archival, cheapest).
+
+5.Data Management & Versioning
+
+	Versioning (keeps multiple versions of an object).
+
+	Lifecycle policies (auto-transition/expire objects).
+
+	Replication (cross-region or same-region).
+
+6.Performance Optimization
+
+	Multi-part upload (for large files).
+
+	Transfer Acceleration (faster uploads via CloudFront).
+
+	S3 Select & Glacier Select (query data without retrieval).
+
+7.Integration with AWS Services
+
+	Works with Lambda, CloudFront, EMR, Athena, Redshift, etc.
+---------------------------------------------------------------------------------
+3.common use cases of s3 bukets 
+	Backup & disaster recovery
+
+	Static website hosting
+
+	Big data analytics & data lakes
+
+	Media storage & distribution
+
+	Software delivery & archives
+-------------------------------------------------------------------------------
+4.what are the diff storage classes avaialbel in amazon s3
+
+1. S3 Standard
+Use Case: Frequently accessed data (hot data)
+Features:
+Ideal for dynamic websites, big data analytics, mobile/gaming apps.
+Stored redundantly across multiple AZs.
+
+2. S3 Intelligent-Tiering
+Use Case: Data with unknown or changing access patterns
+Features:
+
+Automatically moves objects between 2 sub-tiers:
+
+Frequent Access Tier (like S3 Standard)
+
+Infrequent Access Tier (like S3 Standard-IA)
+
+Small monitoring fee per object.
+
+3. S3 Standard-Infrequent Access (S3 Standard-IA)
+Use Case: Long-lived, less frequently accessed data
+Features:
+
+Cheaper storage, but higher cost for retrievals.
+
+Good for backups, disaster recovery.
+
+
+4. S3 One Zone-Infrequent Access (S3 One Zone-IA)
+Use Case: Less critical, infrequently accessed data
+Features:
+
+Ideal for secondary backups or easily reproducible data.
+
+
+5. S3 Glacier Instant Retrieval
+Use Case: Rarely accessed data requiring milliseconds retrieval
+Features:
+
+For archives needing fast access (e.g., medical records, media assets).
+
+
+6. S3 Glacier Flexible Retrieval (formerly S3 Glacier)
+Use Case: Long-term archives (retrieval in mins to hours)
+
+7. S3 Glacier Deep Archive
+Use Case: Rarely accessed data (retrieval in 12+ hours)
+
+8. S3 Outposts
+Use Case: On-premises S3 storage (for hybrid cloud)
+
+--------------------------------------------------------------------------------------
+5.how data is organize in aws s3
+
+In AWS S3, data is organized in a flat, object-based structure (not hierarchical like traditional file systems),
+ but it uses keys, buckets, and prefixes to simulate folders for better organization.
+---------------------------------------------------------------------------------------
+6.what is the max sizeof an object that can be store into aws s3
+
+
+The largest single object you can store in Amazon S3 is:
+✅ 5 TB (5,120 GB) per object
+---------------------------------------------------------------------------
+7.how can you control access to your aws s3 bukets
+
+Method			Use Case				Recommended?
+IAM Policies		Control AWS users/roles			✅ Yes
+Bucket Policies		Cross-account/public/IP-based access	✅ Yes
+Block Public Access	Prevent accidental public exposure	✅ Yes
+Object Ownership	Disable ACLs, enforce bucket control	✅ Yes
+VPC Endpoints		Restrict S3 to private network		✅ (For VPCs)
+ACLs (Legacy)		Rare edge cases				❌ Avoid
+----------------------------------------------------------------------------------
+8.what is versioning in amazon s3 and why would you use it
+Amazon S3 Versioning is a feature that keeps multiple versions of an object (file) in the same bucket.
+ When enabled, every time an object is modified or deleted, S3 automatically preserves the previous version, allowing you to:
+Recover from accidental deletions or overwrites.
+Maintain a history of object changes.
+Comply with data retention policies.
+-------------------------------------------------------------------------------------
+9.how does aws s3 ensure data durability
+
+1. Redundant Storage Across Multiple Facilities
+Automatically replicates every object across ≥3 Availability Zones (AZs) in a region
+Each AZ has multiple storage devices (disks/servers)
+Uses erasure coding (breaks data into fragments with parity checks)
+
+2. Continuous Integrity Checking
+Background data scrubbing constantly verifies object integrity
+Checksum validation detects and repairs bit rot/corruption
+Automatic self-healing when corruption is detected
+
+3. Versioning Protection
+When enabled, preserves all object versions (protects against accidental deletion/corruption)
+Delete operations only apply markers rather than removing data
+
+4. Highly Distributed Architecture
+Data isn't stored on single disks - distributed across:
+Multiple servers
+Multiple racks
+Multiple data centers
+Protects against hardware failures
+
+5. Advanced Error Correction
+Uses Reed-Solomon erasure coding (can reconstruct data even if multiple copies fail)
+More efficient than simple replication (requires less storage overhead)
+
+6. Geographic Protection (Cross-Region Replication)
+Optional CRR (Cross-Region Replication) copies objects to another region
+Protects against regional disasters (though standard multi-AZ is already extremely durable)
+
+7. Automatic Self-Healing
+If corruption detected:
+System automatically retrieves intact fragments
+Rebuilds corrupted portions
+Stores fresh copies
+Entire process happens without customer intervention
+
+8. Data Persistence Mechanisms
+Write confirmation only occurs after data is committed to multiple AZs
+Atomic updates prevent partial writes from causing corruption
+Consistent read-after-write semantics
+-----------------------------------------------------------------------------------------------
+10.what is pre sign url in aws s3 and how is it useful
+
+A pre-signed URL is a time-limited, secure URL that grants temporary access to a private S3 object.
+ It allows users to download or upload files directly to/from S3 without requiring AWS credentials.
+----------------------------------------------------------------------------------------------
+11.what is pre sign url in aws s3 and how is it useful
+Yes! AWS S3 is an excellent, cost-effective solution for hosting static websites (HTML, CSS, JavaScript, images, etc.).
+-------------------------------------------------------------------------------------------
+12.how can you transdfer data into or out of aws s3
+
+Method			Best For			Max File Size		Speed
+
+AWS Console		Small manual transfers		160 GB			Slow
+AWS CLI/SDK		Automated scripts		5 TB			Fast
+Transfer Acceleration	Global large-file uploads	5 TB			Very Fast
+Snow Family		Offline petabyte transfers	Exabytes		N/A (Offline)
+DataSync		On-prem → S3 migration		No limit		10Gbps+
+-----------------------------------------------------------------------------------------
+13.explain the lifecycle policy in s3
+
+1. What Lifecycle Policies Do
+Transition objects to cheaper storage classes (e.g., S3 Standard → S3 IA → Glacier)
+Permanently delete old/unneeded objects
+Save costs by moving data to the most cost-effective storage tier
+
+2. When to Use Lifecycle Policies
+✔ Log files (delete after 30-90 days)
+✔ Backups (transition to Glacier after 30 days, delete after 1 year)
+✔ Temporary data (auto-delete after expiration)
+✔ Compliance data (archive to Glacier Deep Archive)
+-------------------------------------------------------------------------------------------
+14.define amazon s3 glacier
+Amazon S3 Glacier (now part of Amazon S3 storage classes) is a secure, durable, and ultra-low-cost cloud storage service designed for long-term data archiving and backup with retrieval times ranging from minutes to hours.
+----------------------------------------------------------------------------------------------------------
+15.explain the object lock feature aws s3
+
+S3 Object Lock is a data governance feature that allows you to store objects in a write-once-read-many (WORM) model, preventing objects from being deleted or modified for a fixed duration or indefinitely. It's designed for:
+
+Regulatory compliance (SEC 17a-4, FINRA, HIPAA)
+
+Ransomware protection
+
+Legal holds and audit requirements
+--------------------------------------------------------------------------------------
+16.explain the object lock feature aws s3
+
+S3 Object Lock is a data governance feature that allows you to store objects in a write-once-read-many (WORM) model, preventing objects from being deleted or modified for a fixed duration or indefinitely. It's designed for:
+
+Regulatory compliance (SEC 17a-4, FINRA, HIPAA)
+
+Ransomware protection
+
+Legal holds and audit requirements
+
+
+
+Mode				Description			
+Governance Mode			Prevents deletions by most users, but admins with special permissions can override	
+Compliance Mode			Fully immutable - no one (including root account) can delete or modify until retention expires
+
+-------------------------------------------------------------------------------------------------
+17.what are the diff way to encrypt file aws s3
+	
+1. Server-Side Encryption (SSE)
+	A. SSE-S3 (AWS-Managed Keys)
+	B. SSE-KMS (AWS KMS-Managed Keys)
+	C. SSE-C (Customer-Provided Keys)
+2. Client-Side Encryption
+	A. AWS KMS-Integrated Client Encryption
+	B. Custom Client Encryption
+3. HTTPS (Encryption in Transit)
+-----------------------------------------------------------------------------------------
+18.what is static website hosting in aws s3
+
+	Static website hosting is a feature of Amazon S3 that allows you to host complete websites (HTML, CSS, JavaScript, images) directly from an S3 bucket without needing web servers. It's ideal for:
+
+✅ Portfolio sites
+✅ Marketing/brochure sites
+✅ Documentation sites
+✅ Single-page applications (React, Vue, Angular static builds)
+------------------------------------------------------------------------------------------
+19.how is data organize in aws s3
+
+Amazon S3 organizes data in a flat, object-based structure with a bucket-key model, using prefixes to simulate folders for usability.
+
+1. Core Components
+Buckets: Top-level containers (globally unique names, region-specific).
+
+Objects: Files + metadata (key, data, version ID, etc.).
+
+Keys: Full path to objects (e.g., images/profile.jpg).
+
+2. Folder-Like Structure
+Prefixes: Act as "folders" (e.g., logs/2023/).
+
+Delimiters: Typically / for filtering (e.g., list objects under docs/).
+
+3. Advanced Features
+Versioning: Stores multiple object versions under the same key.
+
+Tags: Key-value pairs for categorization (e.g., Env=Prod).
+
+Storage Classes: Assign tiers (e.g., STANDARD, GLACIER) per object.
+--------------------------------------------------------------------------------------
+20.what is s3 transfer acceleration in aws s3
+ 
+S3 Transfer Acceleration is an AWS feature that speeds up file transfers to and from S3 buckets over long distances by using Amazon CloudFront's globally distributed edge locations.
+ It optimizes the network path between clients and S3, reducing latency for distant uploads/downloads.
+--------------------------------------------------------------------------------------------
+21.what is cross region replica in aws s3
+	Cross-Region Replication (CRR) is an S3 feature that automatically copies objects from a source bucket in one AWS region to a destination bucket in another region. This provides data redundancy, compliance, and low-latency global access.
+---------------------------------------------------------------------------------------------
+22.what is the use case of s3 select
+	
+S3 Select is a feature that enables serverless filtering and processing of data directly in S3, eliminating the need to download and process entire files.
+--------------------------------------------------------------------------------------------------
+23.how do you monitor s3 buket matrix
+1. Amazon CloudWatch Metrics (Automatically Collected)
+2. S3 Storage Lens (Advanced Analytics)
+3. Server Access Loggin
+4. AWS CloudTrail (API Activity Logging)
+5. S3 Event Notifications
+6. Cost Allocation Tags
+-----------------------------------------------------------------------------------------------------
+

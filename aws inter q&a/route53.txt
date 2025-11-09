@@ -1,0 +1,165 @@
+1.what is route53 in aws
+  Amazon Route 53 is AWS’s scalable Domain Name System (DNS) web service that translates human-readable domain names (e.g., example.com) into machine-readable IP addresses (e.g., 192.0.2.1).
+ It also provides domain registration, traffic routing, and health checking for highly available applications.
+------------------------------------------------------------------------------
+2.how does route53 handle dns resolution
+  
+ DNS Resolution Process
+When a user accesses a domain (e.g., example.com), Route 53 follows this flow:
+
+Step 1: Query Receipt
+A client (browser, app) sends a DNS query to Route 53’s global anycast network (using the nearest of 100+ edge locations).
+
+Step 2: Hosted Zone Lookup
+Route 53 checks the hosted zone (a container for DNS records) associated with the domain.
+
+Step 3: Record Evaluation
+Applies routing policies (e.g., latency-based, weighted) to select the best endpoint.
+
+Returns the IP address (or alias) to the client.
+
+Step 4: Caching (Optional)
+Responses are cached at DNS resolvers (based on TTL).
+-------------------------------------------------------------------------------------------
+3.what type of dns record does route53 support
+  
+1. Core DNS Records
+Record	Purpose	Example
+A	IPv4 address mapping	example.com → 192.0.2.1
+AAAA	IPv6 address mapping	example.com → 2001:db8::1
+CNAME	Domain alias (subdomains only)	www.example.com → example.com
+MX	Mail server routing	10 mail.example.com
+TXT	Text data (email security, etc.)	"v=spf1 include:amazonses.com ~all"
+
+2. AWS-Specific Records
+Alias Records: Route to AWS services (ALB, S3, CloudFront) without TTL delays.
+
+SRV: Service discovery (e.g., VoIP, microservices).
+
+CAA: Restrict SSL certificate issuers.
+----------------------------------------------------------------------------------------
+4.what is the hosted zone in route53
+
+  A hosted zone in Amazon Route 53 is a container for DNS records that define how traffic is routed for a specific domain (e.g., example.com).
+ It acts as the authoritative source for DNS resolution, mapping domain names to AWS or external resources like EC2 instances, load balancers, or S3 buckets.
+---------------------------------------------------------------------------------------------
+5.how can you configure domain register with another register to use route53 in aws
+  Step-by-Step Process
+1. Create a Hosted Zone in Route 53
+Log in to your AWS Management Console
+
+Navigate to Route 53 service
+
+Click "Hosted zones" in the left navigation
+
+Click "Create hosted zone"
+
+Enter your domain name (e.g., example.com)
+
+Choose "Public Hosted Zone" (unless you need private)
+
+Click "Create"
+
+2. Note the Route 53 Name Servers
+In your new hosted zone details, you'll see 4 name servers listed (ns-xxx.awsdns-xx.com format)
+
+Copy all four name server addresses
+
+3. Update Name Servers at Your Current Registrar
+Log in to your domain registrar's control panel
+
+Find the DNS or Name Server management section
+
+Replace the existing name servers with the four Route 53 name servers you copied
+
+Save changes
+
+4. Create DNS Records in Route 53
+Back in Route 53, create records in your hosted zone:
+
+5. Wait for Propagation
+DNS changes can take 24-48 hours to propagate globally.
+---------------------------------------------------------------------------------------
+6.what is the purpose of health check in aws route53
+  
+In AWS Route 53, a health check is a feature that monitors the health and availability of your resources, such as web servers, applications, or other endpoints. The primary purposes of Route 53 health checks are:
+
+1. Monitor Endpoint Availability
+Continuously checks if your application, server, or other resources (HTTP/HTTPS/TCP) are reachable and responding correctly.
+
+Verifies if the endpoint returns expected status codes (e.g., HTTP 200 OK).
+
+2. Enable DNS Failover (High Availability)
+Automatically routes traffic away from unhealthy resources to healthy ones (using Failover Routing Policy).
+
+Helps maintain application uptime by switching to backup resources if the primary fails.
+
+3. CloudWatch Integration & Alerts
+Sends metrics to Amazon CloudWatch, allowing you to set alarms for downtime.
+
+Notifies you via SNS (Simple Notification Service) when a resource becomes unhealthy.
+
+4. Monitor CloudFront & S3 Website Endpoints
+Can check the health of Amazon CloudFront distributions and S3 bucket websites.
+
+5. Calculated & Latency-Based Health Checks
+Combine multiple health checks into a calculated health check for complex monitoring.
+
+Works with Latency-Based Routing to direct traffic to the fastest healthy endpoint.
+----------------------------------------------------------------------------------------------------
+7.can route53 be used for domain registration
+es! AWS Route 53 can be used for domain registration, along with its core DNS management services. Here’s what you need to know:
+
+1. Domain Registration with Route 53
+Route 53 allows you to register new domain names (e.g., .com, .net, .org, and many more TLDs).
+
+You can also transfer existing domains from other registrars (like GoDaddy, Namecheap) to Route 53.
+----------------------------------------------------------------------------------------------------
+8.whats the diff between alias record and cname record in aws route53
+
+1. CNAME (Canonical Name) Record
+Purpose: Maps a subdomain (e.g., www.example.com) to another domain name (e.g., example.com or myapp.elasticbeanstalk.com).
+
+Use Case:
+
+Redirecting www.example.com → example.com.
+
+Pointing a subdomain to an external service (e.g., blog.example.com → myblog.wordpress.com).
+
+2.2. Alias Record
+Purpose: Maps a domain/subdomain directly to an AWS resource (e.g., S3 bucket, CloudFront, ALB, Elastic Beanstalk, or another Route 53 record).
+
+Use Case:
+
+Pointing the root domain (example.com) to an S3 static website or CloudFront distribution.
+
+Directly routing traffic to AWS services without extra lookups (better performance).
+-------------------------------------------------------------------------------------------------------
+9.how can you implement routing policies in the route53
+  1. Simple Routing Policy (Default)
+Use Case: Basic routing to a single resource (e.g., one web server).
+
+2. Weighted Routing Policy
+Use Case: Split traffic between multiple resources based on assigned weights (e.g., A/B testing, canary deployments).
+
+3. Latency-Based Routing (LBR)
+Use Case: Route users to the resource with the lowest latency (e.g., multi-region deployments).
+
+4. Failover Routing Policy
+Use Case: Active-passive disaster recovery (e.g., primary site fails, traffic shifts to backup).
+
+5. Geolocation Routing Policy
+Use Case: Route users based on their geographic location (e.g., EU users to Frankfurt, US users to
+
+6. Multi-Value Answer Routing
+Use Case: Distribute traffic across multiple IPs with health checks (like Simple Routing but with failover).
+
+
+7. Geoproximity Routing (Traffic Flow Only)
+Use Case: Route based on geographic distance with bias adjustments (requires Route 53 Traffic Flow).
+---------------------------------------------------------------------------
+10.whats the significance of ttl in dns recors
+
+ TTL (Time to Live) is a critical setting in DNS records that determines how long a DNS record is cached by resolvers (like ISPs, browsers, or DNS servers) before it refreshes. 
+-------------------------------------------------------------------------------------------
+
