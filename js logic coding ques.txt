@@ -140,6 +140,12 @@ console.log("2" - 2);
 
 31.console.log( NaN ===NaN);
 
+///NaN is NOT equal to anything
+
+Not equal to another NaN
+
+Not even equal to itself
+
 31.map state to props and map dispatch to props
 
 32.diff types of list in html
@@ -564,30 +570,29 @@ abc.call({name:"sarang"})
 ---------------------------------------------------------------
 70.two sum array
 
-let arr=[8,1,5,4,6,11]
+function sumOf(arr, target) {
+  const map = new Map(); // value → index
 
-function sumOf(arr,target){
-    let ans=new Array(-1,-1)
+  for (let i = 0; i < arr.length; i++) {
+    const complement = target - arr[i];
 
-    for(let i=0;i<arr.length;i++){
-        for(let j=i+1;j<arr.length;j++){
-            if(arr[i]+arr[j]==target){
-                ans[0]=i
-                ans[1]=j
-                return ans
-            }
-        }
+    if (map.has(complement)) {
+      return [map.get(complement), i];
     }
 
-    return ans
+    map.set(arr[i], i);
+  }
+
+  return [-1, -1];
 }
-const res=sumOf(arr,10)
-console.log(res[0],res[1])
+
+const res = sumOf(arr, 10);
+console.log(res[0], res[1]);
 -------------------------------------------------------------------------
 71.concatinate two string alternatively
 
-let str2="sarang"
-let str1="patil"
+let str1="sarang"
+let str2="patil"
 
 let str=""
 let m=str1.length

@@ -1,0 +1,320 @@
+1. Tell me about yourself.
+
+Well,thaks for the oppurtnity
+My name is sarang patil,I am from Nagpur,currently I am working as a asoftware stack developet at a capgeminy.
+I have total 3.2 yrs of experience.My core expertice lies in by using react,typescript,NextJS in fronend
+and NodeJS,Express,MongoDb,Firebase in backend.I also have the good knowlege in cloud like AWS and some
+development operation tool loke Dockerr,K8S and Jenkings
+Over the yers I have created ranges of projects in both frontend and backend like Hospital app,School app,POS 
+which help me to uplift my development skills.
+I also had the opportunity to guide a team of interns, where I supported them in completing their tasks on time and maintaining good code quality.
+ This experience improved my communication and leadership skills.
+
+Other than professional carrier,
+I am self motivate,hardworking,adaptive to any situation and dedicated to my work
+I am passinate about building high quality application that deliver exceptinal user experience and
+I am commited to continious lerning and adapting new technology
+so thats set all about me...thanks
+
+2. What are your strengths?
+
+“My key strengths are strong analytical thinking, quick adaptability to new technologies, and the ability to write clean and optimized code.
+ I also stay calm under pressure and focus on solving the root cause of problems rather than quick fixes.”
+
+3. What are your weaknesses?
+
+“At times, I focus too much on perfecting code, which can slightly slow me down.
+ But I’ve been working on balancing quality with deadlines by setting clear priorities and time limits for each task.”
+
+
+4. Why do you want to work for our company?
+
+“I admire how your company blends innovation with real-world impact.
+ Your focus on scalable tech solutions and growth opportunities aligns with my goals to learn continuously and contribute to meaningful products.”
+I’m looking for a place where I can contribute my full-stack skills, solve real problems, and work with a strong engineering team.
+Your company provides exactly that kind of opportunity.”
+
+5. Why should we hire you?
+
+You should hire me bcoz I acquire multiple skills that makes me compatible with this job.
+I am always dedicated to my work and commited to delivering high quality results.
+I have righ skills,minset and dedicatin to contribute effectively to your team.
+Additionslly,I bring strong work ethcs,problem solving skills and proactive approach to responsibilities.
+this is how I can play vital role in your organisation.So I will be a good addition to your team. 
+----------------------------------------------------------------------------------
+6. Where do you see yourself in 5 years?
+
+“In five years, I see myself growing into a senior software engineer role, leading projects, mentoring juniors,
+ and contributing to architectural decisions while continuously expanding my technical and leadership skills.”
+
+--------------------------------------------------------------------------------
+7. Describe a challenging project you worked on.
+
+“In one project, we faced severe performance issues due to large data rendering.
+ I analyzed the bottleneck, implemented pagination, and optimized API responses, which reduced load time by over 60%.
+ It was a great learning experience in performance tuning and teamwork.”
+
+or
+
+“One of the challenging problems I solved recently was optimizing a complex dashboard in Next.js and firebase.
+ The page was rendering around 4000+ records, and users were complaining about lag.
+Situation: The UI froze and API response times were inconsistent.
+Task: Improve performance without changing the business logic.
+Action:
+On the frontend, I implemented React virtualization, memoized heavy components, and reduced re-renders using useCallback and useMemo.
+On the backend, I added MongoDB pagination, indexes, and optimized the aggregation pipeline.
+I also introduced a debounced search, which reduced unnecessary API calls.
+Result:
+The page load time dropped from ~6 seconds to under 1.5 seconds. The client appreciated that the performance issue was fixed without any downtime.
+This was a good example of using both frontend and backend optimizations together.”
+
+==============================================================================================
+8. How do you handle pressure or tight deadlines?
+
+(HR Round)
+Tight deadlines don’t bother me because I rely on planning, collaboration, and consistent execution.
+I prioritize tasks, break them into smaller milestones, and stay focused on outcomes rather than stress.
+ I’ve learned that clear communication with the team and proper time management are key under pressure.”
+
+(Technical Round)
+“Whenever there are tight deadlines, I try to stay calm and approach the work in a structured way.
+
+First, I break the requirement into smaller tasks and quickly identify what is critical and what can be done later. This helps me focus on the most impactful work first.
+
+Second, I communicate early with my lead or team—if there is any dependency, blocker, or risk, I highlight it immediately so we can plan accordingly.
+
+Third, I eliminate distractions and work in focused intervals, which helps me maintain a steady pace even under pressure.
+
+In my previous project, we had a release deadline for a new dashboard module. I broke the feature into API integration, UI components, and testing.
+ I completed the critical pieces first and collaborated closely with the backend and QA teams.
+We delivered the feature on time with good quality.
+
+So overall, I handle pressure by staying organized, communicating clearly, and keeping a problem-solving mindset.”
+
+======================================================================================
+
+9. What motivates you at work?
+
+“Solving challenging problems and seeing my code improve performance or user experience gives me real satisfaction.
+Whenever I see a feature I developed working smoothly in production it genuinely motivates me.
+ I also get motivated when I learn new technologies or optimize something—like improving load times, fixing a tricky bug, or refining architecture.
+Continuous improvement and seeing real impact keeps me driven.”**
+
+
+=========================================================================================
+10. Tell me about a time you worked in a team.
+
+
+“In one sprint, we had to deliver a major feature with overlapping tasks.
+ I took the lead on integration and maintained active communication between backend and frontend teams.
+ That coordination helped us deliver on time with zero major bugs.”
+or
+(Technical Round)
+
+Situation:
+“In my last project, we were building a new multi role complex dashboard where both frontend and backend work had to be tightly aligned.”
+
+Task:
+“My responsibility was to develop the UI in Next.js, integrate APIs, and ensure the dashboard was optimized and responsive.”
+
+Action:
+
+“I worked closely with the backend team to finalize the API contract early.
+
+Collaborated with the designer to clarify edge cases and responsive behavior.
+
+Coordinated with QA to prepare test scenarios ahead of time.
+
+I also shared reusable components and helped another teammate integrate charts using React libraries.”
+
+Result:
+“As a team, we delivered the feature 2 days ahead of schedule, with minimal bugs.
+The dashboard became one of the most used modules, and the client appreciated the performance improvements and clean UI.
+This experience showed how good communication and clear ownership make teamwork smooth and efficient.”
+
+=============================================================================================================================
+11. How do you handle conflicts in a team?
+
+“I prefer to resolve conflicts with open communication.
+ I listen to both sides, focus on facts, and aim for a solution that benefits the project rather than individual opinions.”
+
+================================================================================================
+14. What do you know about our company?
+
+“Your company is known for its strong engineering culture, innovation in scalable products, and emphasis on continuous learning 
+ all of which align with my professional goals.”
+
+(or detail)
+“I know that XYZ is one of the world’s leading IT and consulting companies, known for delivering large-scale digital transformation projects.
+What really stands out to me is your focus on cloud, AI, data, and modern engineering practices.
+ I also like how XYZ partners with major clients across industries—finance, healthcare, retail, and many more—and helps them build scalable, secure, and innovative solutions.
+
+I appreciate that the company invests heavily in employee growth and certifications, especially in cloud and modern tech stacks.
+Overall, XYZ’s combination of global impact, strong engineering culture, and continuous learning makes it a place where I can contribute and grow.”
+
+============================================================================================
+
+
+15. Do you prefer working alone or in a team?
+
+“I’m comfortable in both settings.
+ I value independent focus time when coding but also enjoy collaborating in teams to brainstorm ideas and solve problems effectively.”
+=============================================================================
+
+16. What are your career goals?
+
+“My short-term goal is to enhance my technical and architectural skills.
+ Long-term, I aim to grow into a senior or lead engineer role where I can contribute to system design and mentor others.”
+
+===========================================================================================
+17. What do you do if you miss a deadline?
+
+“I communicate early about possible delays, explain the reasons, and offer alternative solutions.
+ Transparency and early communication usually help the team realign priorities effectively.”
+
+===================================================================================================
+
+
+18. How do you stay updated with new technologies?
+
+“I regularly follow tech blogs, watch developer conferences, and contribute to small open-source projects.
+ I also enjoy experimenting with new frameworks in my personal projects.”
+=======================================================================================
+
+19. What are your hobbies or interests?
+
+“I enjoy solving coding challenges, reading about new technologies, and contributing to small side projects.
+ Outside of tech, I like gaming and outdoor activities to keep a good balance.”
+
+==================================================================================================
+
+20. Do you have any questions for us?
+
+“Yes. Could you share more about the tech stack the team is currently using,
+ and what opportunities are available for upskilling or internal growth?”
+
+=================================================================
+21.Tell Me About Your Project 
+
+“In my current project, I’m working as a Full-Stack Developer on a scalable complex dashboard built using Next.js,TypeScript, Node.js, and MongoDB.
+ The goal of the project is to provide a seamless dashboard experience for users with real-time updates,multi role and secure authentication.
+
+On the frontend, I work extensively with Next.js App Router, server/client components, and TypeScript.
+ I built reusable UI components, optimized SSR/SSG pages, implemented API integration, and improved UX by adding caching, pagination, and skeleton loading.
+ One key contribution was optimizing a heavy data dashboard by implementing virtualization and memoization, which significantly reduced load time.
+
+On the backend, I work with Node.js, Express, and MongoDB. I create REST APIs, handle DB schema design, optimize queries with indexes, and implement role-based access.
+ I also work with Firebase for authentication and notifications, and AWS (Lambda, S3, CloudWatch) for serverless functions, file storage, and logs.
+
+For authentication, I implemented a secure login flow using Firebase Auth and added route protection and authorization using Next.js middleware.
+ This ensured only authorized roles could access specific dashboard modules.
+
+
+Shorter Version (HR-friendly)
+
+“My project is a full-stack web platform built with React, Next.js, Node.js, and MongoDB.
+ I worked on building UI components, optimizing performance, designing APIs, and implementing authentication using Firebase.
+ I also integrated AWS services like S3 and Lambda. The project helped me grow as a full-stack developer and deliver scalable, user-friendly features.”
+
+===================================================================
+22. Tell me about a challenging technical problem you solved.
+
+“One of the challenging problems I solved recently was optimizing a complex dashboard in Next.js and firebase.
+ The page was rendering around 4000+ records, and users were complaining about lag.
+
+Situation: The UI froze and API response times were inconsistent.
+Task: Improve performance without changing the business logic.
+Action:
+
+On the frontend, I implemented React virtualization, memoized heavy components, and reduced re-renders using useCallback and useMemo.
+
+On the backend, I added MongoDB pagination, indexes, and optimized the aggregation pipeline.
+
+I also introduced a debounced search, which reduced unnecessary API calls.
+Result:
+The page load time dropped from ~6 seconds to under 1.5 seconds. The client appreciated that the performance issue was fixed without any downtime.
+This was a good example of using both frontend and backend optimizations together.”
+========================================================================
+
+23. Tell me about your biggest professional achievement.
+
+Answer:
+“My biggest achievement was optimizing a large data rendering module that was slowing the UI.
+ I implemented virtualization, memoization, and API pagination. This reduced load time by 60% and improved overall UX.
+ The client praised the performance improvement.”
+
+=============================================================================
+
+24 Describe a time when you had to take ownership of a project.
+
+Answer:
+“In my previous project, we had to integrate a complete authentication flow using Firebase + Next.js. There was no clear documentation, and timelines were tight.
+
+I took ownership of the entire auth module:
+
+designed the folder structure
+
+implemented login, signup, OTP, password reset
+
+set up Firebase rules for security
+
+created reusable auth guards for protected routes
+
+integrated role-based access using middleware
+
+I communicated my progress daily to the team, flagged risks early, and documented the entire flow for future developers.
+The module worked smoothly in production and became the base for future features.”
+
+=================================================================================================
+
+25.4. Tell me about a situation where you disagreed with a technical decision.
+
+“We were building a large form module, and a colleague suggested using React Hook Form with schema validation using Yup which would make the component heavy and hard to manage.
+
+I disagreed and proposed using multiple local states, 
+I explained the benefits: performance, cleaner code, fewer re-renders, and built-in error handling.
+
+Instead of pushing my approach, I created a quick POC and demonstrated the difference.
+The team agreed immediately, and using React Hook Form made the entire form flow faster and more maintainable.”
+
+===============================================================================
+25.8. Describe a time you helped a teammate.
+
+Answer:
+“We onboarded a new developer who was struggling with the Next.js App Router structure.
+
+I spent time explaining:
+
+server vs client components
+
+data fetching patterns
+
+middleware flow
+
+file-based routing
+
+I paired with him during his first few tasks and helped him set up his environment.
+Within a week, he became fully productive and delivered a feature independently.”
+
+===============================================================================
+
+26.6. Describe your experience handling production issues.
+
+Answer:
+“Once, a production bug occurred where users couldn’t upload images to S3 via the backend.
+
+Steps I took:
+
+Checked AWS CloudWatch logs, found signature mismatch.
+
+Identified that the AWS SDK version was updated but the policy was outdated.
+
+Rolled back the SDK version immediately to restore uploads.
+
+Then applied a long-term fix by updating the S3 bucket policy and regenerating the IAM credentials.
+
+Added unit tests to verify signature generation.
+
+This prevented similar outages and ensured smooth S3 operations afterward.”
+
+=================================================================================

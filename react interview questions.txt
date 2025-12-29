@@ -174,7 +174,7 @@ Javascript interview question
 82.how do you sort or reverse arry without changing its orignal array
 83.how can we replace an element at specific index of an array
 84.how can we insert an element at specific index of an array
-85.how can we deletean element at specific index of an array
+85.how can we delete an element at specific index of an array
 86.how can we delete a specific element of an array
 87.how can we clone object
 88.how to add array at beggining of array
@@ -191,6 +191,27 @@ Javascript interview question
 99.how do you turn an object into an array
 100.diff bet find() and every() method
 101.implement debounce
+	```
+ function debounce(func,delay){
+    let timeoutId
+   return function(...args){
+        
+    clearTimeout(timeoutId)
+    timeoutId=setTimeout(()=>func.apply(this,args),delay)
+   }
+}
+
+const handleSearch=(query)=>{
+    console.log(query)
+}
+
+const debounceSearch=debounce(handleSearch,500)
+
+
+// <input type="text" id="search"/>
+// document.getElementid("search").addEventListner("input",debounceSearch)
+
+```
 
 
 

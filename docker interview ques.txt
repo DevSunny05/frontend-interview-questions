@@ -125,7 +125,6 @@ Scalability: Simplifies scaling applications through container orchestration too
 
 
 
-
 1. What is a Docker network, and why is it used?
 Answer: A Docker network allows containers to communicate with each other and with the host system.
  Docker provides several network types (bridge, host, overlay, and none) to control how containers interact.
@@ -136,7 +135,8 @@ Answer: A bridge network is the default network driver in Docker that allows con
  An overlay network, on the other hand, allows containers to communicate across multiple Docker hosts, making it useful for clustering and orchestration tools like Docker Swarm and Kubernetes.
 
 3. How do you share data between a host and a container?
-Answer: You can share data between a host and a container using volumes or bind mounts. Volumes are managed by Docker and provide persistent storage, while bind mounts allow you to link a specific directory on the host to a directory in the container.
+Answer: You can share data between a host and a container using volumes or bind mounts.
+ Volumes are managed by Docker and provide persistent storage, while bind mounts allow you to link a specific directory on the host to a directory in the container.
 
 4. What is Docker Swarm?
 Answer: Docker Swarm is Docker's native clustering and orchestration tool that allows you to manage a cluster of Docker hosts as a single virtual system. It enables high availability, load balancing, and scaling of containerized applications.
