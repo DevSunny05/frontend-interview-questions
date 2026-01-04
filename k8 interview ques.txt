@@ -125,7 +125,8 @@ Enables users to run applications across multiple cloud providers or hybrid envi
 The Kubernetes architecture consists of two main components: Control Plane and Worker Nodes. Each part has specific roles and responsibilities, ensuring the efficient management of containerized applications. Here's a detailed breakdown:
 
 1. Control Plane
-The control plane is the brain of a Kubernetes cluster. It manages the cluster’s overall state, including scheduling workloads, monitoring nodes, and maintaining desired states.
+The control plane is the brain of a Kubernetes cluster.
+ It manages the cluster’s overall state, including scheduling workloads, monitoring nodes, and maintaining desired states.
 
 Key Components:
 
@@ -376,9 +377,7 @@ It consists of a control plane (for managing the cluster) and worker nodes (wher
 5. What is the role of kube-apiserver in Kubernetes?
 
 Answer:
-The kube-apiserver is the central management component of Kubernetes.
-
-It exposes the Kubernetes API, acting as the communication hub for all components.
+The kube-apiserver is the front-end and central communication hub of the Kubernetes control plane.
 
 All requests from kubectl, controllers, and other components go through the API server.
 

@@ -3,12 +3,15 @@
 Well,thaks for the oppurtnity
 My name is sarang patil,I am from Nagpur,currently I am working as a asoftware stack developet at a capgeminy.
 I have total 3.2 yrs of experience.My core expertice lies in by using react,typescript,NextJS in fronend
-and NodeJS,Express,MongoDb,Firebase in backend.I also have the good knowlege in cloud like AWS and some
+and NodeJS,Express,MongoDb,Firebase in backend.I also have the good handson in cloud like AWS and some
 development operation tool loke Dockerr,K8S and Jenkings
 Over the yers I have created ranges of projects in both frontend and backend like Hospital app,School app,POS 
 which help me to uplift my development skills.
 I also had the opportunity to guide a team of interns, where I supported them in completing their tasks on time and maintaining good code quality.
  This experience improved my communication and leadership skills.
+
+taking about project in my current organisation, I’m working as a Full-Stack Developer on a scalable complex dashboard built using Next.js,TypeScript, Node.js, and MongoDB.
+ The goal of the project is to provide a seamless dashboard experience for users with real-time updates,multi role and secure authentication.
 
 Other than professional carrier,
 I am self motivate,hardworking,adaptive to any situation and dedicated to my work
@@ -132,21 +135,22 @@ Result:
 The dashboard became one of the most used modules, and the client appreciated the performance improvements and clean UI.
 This experience showed how good communication and clear ownership make teamwork smooth and efficient.”
 
-=============================================================================================================================
+===============================================================================================================================
 11. How do you handle conflicts in a team?
 
 “I prefer to resolve conflicts with open communication.
  I listen to both sides, focus on facts, and aim for a solution that benefits the project rather than individual opinions.”
 
-================================================================================================
+===============================================================================================================================
 14. What do you know about our company?
 
-“Your company is known for its strong engineering culture, innovation in scalable products, and emphasis on continuous learning 
- all of which align with my professional goals.”
+
 
 (or detail)
-“I know that XYZ is one of the world’s leading IT and consulting companies, known for delivering large-scale digital transformation projects.
-What really stands out to me is your focus on cloud, AI, data, and modern engineering practices.
+“what I know that your organisation is one of the leading IT and consulting companies, known for delivering large-scale digital transformation projects.
+What really stands out to me is your focus on cloud, data, and modern engineering practices.
+“Your organisation is known for its strong engineering culture, innovation in scalable products, and emphasis on continuous learning 
+ all of which align with my professional goals.
  I also like how XYZ partners with major clients across industries—finance, healthcare, retail, and many more—and helps them build scalable, secure, and innovative solutions.
 
 I appreciate that the company invests heavily in employee growth and certifications, especially in cloud and modern tech stacks.
