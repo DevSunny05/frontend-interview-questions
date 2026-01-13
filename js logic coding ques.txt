@@ -682,3 +682,91 @@ console.log(null==undefined)  //true
 console.log(null===undefined)  //false
 
 ----------------------------------------------------------
+wrap each text in coln
+84.let str="apple,samsung;vivo"
+
+const res=str.split(/[,;]/)
+console.log(res)
+--------------------------------------------------------
+85.output will be
+
+let str="JF"
+console.log(JSON.stringify(str)===str)
+
+-----------------------------------------------------
+86 outpot willl be
+
+function test(a,a){
+    console.log(a)
+}
+test(5)
+
+------------------------------------------------------
+87.output 
+
+function a(){return 'a'}
+function b(){return 'b'}
+function c(){return 'c'}
+
+console.log((a(),b(),c()))
+console.log((b(),c(),a()))
+console.log((c(),a(),b()))
+
+----------------------------------------------------
+
+88.output 
+
+let r=[9,8,7,6][1,2,3]
+console.log(r)
+
+-----------------------------------------------------
+89.function check(...arg){
+    for(let x of arg){
+        if(typeof(x)!=='number'){
+            throw new Error()
+        }
+        
+    }
+}
+
+function test(a,b){
+    check(a,b)
+    console.log(a+b)
+}
+
+test("a",23)
+test(23,23)
+
+---------------------------------------------------------
+
+90filter even numbers fro given array and squre then
+
+let arr=[1,2,3,4,5,6]
+
+const res=arr.flatMap(n=>n%2==0?n*n:[])
+
+console.log(res)
+
+-------------------------------------------------------
+91.output
+
+console.log([4895]>[98])
+console.log([3]>[2])
+
+-------------------------------------------------------
+92. grouped the users base on city
+
+const groupedByCity = users.reduce((acc, user) => {
+  const city = user.city;
+
+  if (!acc[city]) {
+    acc[city] = [];
+  }
+
+  acc[city].push(user);
+  return acc;
+}, {});
+
+console.log(groupedByCity);
+
+----------------------------------------------------------------

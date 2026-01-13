@@ -142,6 +142,17 @@ This experience showed how good communication and clear ownership make teamwork 
  I listen to both sides, focus on facts, and aim for a solution that benefits the project rather than individual opinions.”
 
 ===============================================================================================================================
+12.Why do you applyied for this job/role
+
+“I applied for this job because the role closely matches my skills and the kind of work I want to do.
+The position requires strong full-stack development using modern technologies like React, Next.js, Node.js, and cloud services, which aligns well with my experience.
+
+I’m also looking for a role where I can take ownership of features, work on scalable applications, and continue improving my technical skills.
+This job gives me the opportunity to contribute meaningfully while growing as a full-stack developer.”
+
+
+
+================================================================================================================================
 14. What do you know about our company?
 
 
