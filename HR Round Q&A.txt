@@ -1,3 +1,4 @@
+
 1. Tell me about yourself.
 
 Well,thaks for the oppurtnity
@@ -83,6 +84,7 @@ I prioritize tasks, break them into smaller milestones, and stay focused on outc
 “Whenever there are tight deadlines, I try to stay calm and approach the work in a structured way.
 
 First, I break the requirement into smaller tasks and quickly identify what is critical and what can be done later. This helps me focus on the most impactful work first.
+I’ve learned that clear communication with the team and proper time management are key under pressure.
 
 Second, I communicate early with my lead or team—if there is any dependency, blocker, or risk, I highlight it immediately so we can plan accordingly.
 
@@ -152,7 +154,7 @@ This job gives me the opportunity to contribute meaningfully while growing as a 
 
 
 
-================================================================================================================================
+==============================================================================================================================
 14. What do you know about our company?
 
 
@@ -163,52 +165,51 @@ What really stands out to me is your focus on cloud, data, and modern engineerin
 “Your organisation is known for its strong engineering culture, innovation in scalable products, and emphasis on continuous learning 
  all of which align with my professional goals.
  I also like how XYZ partners with major clients across industries—finance, healthcare, retail, and many more—and helps them build scalable, secure, and innovative solutions.
-
-I appreciate that the company invests heavily in employee growth and certifications, especially in cloud and modern tech stacks.
 Overall, XYZ’s combination of global impact, strong engineering culture, and continuous learning makes it a place where I can contribute and grow.”
 
-============================================================================================
+===============================================================================================================================
 
 
 15. Do you prefer working alone or in a team?
 
 “I’m comfortable in both settings.
  I value independent focus time when coding but also enjoy collaborating in teams to brainstorm ideas and solve problems effectively.”
-=============================================================================
+
+==============================================================================================================================
 
 16. What are your career goals?
 
 “My short-term goal is to enhance my technical and architectural skills.
  Long-term, I aim to grow into a senior or lead engineer role where I can contribute to system design and mentor others.”
 
-===========================================================================================
+========================================================================================================================================
 17. What do you do if you miss a deadline?
 
 “I communicate early about possible delays, explain the reasons, and offer alternative solutions.
  Transparency and early communication usually help the team realign priorities effectively.”
 
-===================================================================================================
+===============================================================================================================================
 
 
 18. How do you stay updated with new technologies?
 
 “I regularly follow tech blogs, watch developer conferences, and contribute to small open-source projects.
  I also enjoy experimenting with new frameworks in my personal projects.”
-=======================================================================================
+=================================================================================================================================
 
 19. What are your hobbies or interests?
 
 “I enjoy solving coding challenges, reading about new technologies, and contributing to small side projects.
  Outside of tech, I like gaming and outdoor activities to keep a good balance.”
 
-==================================================================================================
+=================================================================================================================================
 
 20. Do you have any questions for us?
 
 “Yes. Could you share more about the tech stack the team is currently using,
  and what opportunities are available for upskilling or internal growth?”
 
-=================================================================
+==================================================================================================================================
 21.Tell Me About Your Project 
 
 “In my current project, I’m working as a Full-Stack Developer on a scalable complex dashboard built using Next.js,TypeScript, Node.js, and MongoDB.
@@ -292,7 +293,7 @@ I explained the benefits: performance, cleaner code, fewer re-renders, and built
 Instead of pushing my approach, I created a quick POC and demonstrated the difference.
 The team agreed immediately, and using React Hook Form made the entire form flow faster and more maintainable.”
 
-===============================================================================
+================================================================================================= 
 25.8. Describe a time you helped a teammate.
 
 Answer:

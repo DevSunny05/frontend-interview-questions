@@ -212,6 +212,22 @@ const debounceSearch=debounce(handleSearch,500)
 // document.getElementid("search").addEventListner("input",debounceSearch)
 
 ```
+Implement Promise.all polyfill
+Implement Promise.any polyfill
+Implement Array.prototype.reduce polyfill
+Implement Lodash’s flatten method
+Implement auto-retry for promises
+Throttle promises by batching
+Debouncing implementation
+Throttling implementation
+Execute N async tasks in series
+Output for tricky 10-15 JavaScript snippets
+Object vs Map differences in JavaScript
+Difference between PATCH and PUT
+Difference between debounce and throttle
+How does the JavaScript Engine work
+What is the Event Loop and how does the Microtask Queue work?
+How to override toString on String.prototype?
 
 
 
